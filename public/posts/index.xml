@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on littlepig</title>
+    <link>https://xxxdgblog.github.io/posts/</link>
+    <description>Recent content in Posts on littlepig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>For-test</title>
+      <link>https://xxxdgblog.github.io/posts/for-test/</link>
+      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/posts/for-test/</guid>
+      <description>&lt;p&gt;用于测试, 点击查看，可能效果不是好&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Generation of the site</title>
+      <link>https://xxxdgblog.github.io/posts/introduction/</link>
+      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/posts/introduction/</guid>
+      <description>&lt;p&gt;由于近期为敏感时期，我的个人部署在&lt;code&gt;Netlify&lt;/code&gt;站点陆续被墙，于是使用&lt;code&gt;Hugo&lt;/code&gt;简单实现了一个替代品&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

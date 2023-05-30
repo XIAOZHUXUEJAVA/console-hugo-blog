@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>littlepig</title>
+    <link>https://xxxdgblog.github.io/</link>
+    <description>Recent content on littlepig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>For-test</title>
+      <link>https://xxxdgblog.github.io/posts/for-test/</link>
+      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/posts/for-test/</guid>
+      <description>&lt;p&gt;用于测试, 点击查看，可能效果不是好&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Generation of the site</title>
+      <link>https://xxxdgblog.github.io/posts/introduction/</link>
+      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/posts/introduction/</guid>
+      <description>&lt;p&gt;由于近期为敏感时期，我的个人部署在&lt;code&gt;Netlify&lt;/code&gt;站点陆续被墙，于是使用&lt;code&gt;Hugo&lt;/code&gt;简单实现了一个替代品&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://xxxdgblog.github.io/about/</link>
+      <pubDate>Sun, 29 May 2022 21:05:33 +0530</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/about/</guid>
+      <description>A Simple Blog With Hugo
+name: xiaozhu
+hobby: music
+other sites:
+https://xxxdgblog.netlify.app/blog
+https://chat-xiaozhu.netlify.app/zh</description>
+    </item>
+    
+    <item>
+      <title>Hel, Poland</title>
+      <link>https://xxxdgblog.github.io/photos/hel-poland-3/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/photos/hel-poland-3/</guid>
+      <description>Hel Peninsula (Polish: Mierzeja Helska) is a 35-km-long sand bar peninsula in northern Poland separating the Bay of Puck from the open Baltic Sea. The width of the peninsula varies from approximately 300 m near Jurata, through 100 m in the most narrow part to over 3 km at the tip. Since the peninsula was formed entirely of sand, it is frequently turned into an island by winter storms. Until the 17th century the peninsula was a chain of islands that formed a strip of land only during the summer.</description>
+    </item>
+    
+    <item>
+      <title>Hel, Poland</title>
+      <link>https://xxxdgblog.github.io/photos/hel-poland-2/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/photos/hel-poland-2/</guid>
+      <description>Hel Peninsula (Polish: Mierzeja Helska) is a 35-km-long sand bar peninsula in northern Poland separating the Bay of Puck from the open Baltic Sea. The width of the peninsula varies from approximately 300 m near Jurata, through 100 m in the most narrow part to over 3 km at the tip. Since the peninsula was formed entirely of sand, it is frequently turned into an island by winter storms. Until the 17th century the peninsula was a chain of islands that formed a strip of land only during the summer.</description>
+    </item>
+    
+    <item>
+      <title>Arizona, US</title>
+      <link>https://xxxdgblog.github.io/photos/arizona-us/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/photos/arizona-us/</guid>
+      <description>The Grand Canyon is a steep-sided canyon carved by the Colorado River in Arizona, United States. The canyon is 277 miles (446 km) long, up to 18 miles (29 km) wide and attains a depth of over a mile (6,093 feet or 1,857 meters).</description>
+    </item>
+    
+    <item>
+      <title>Chicago, US</title>
+      <link>https://xxxdgblog.github.io/photos/chicago-us/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/photos/chicago-us/</guid>
+      <description>Chicago, officially the City of Chicago, is the most populous city in the U.S. state of Illinois, and the third-most-populous city in the United States. With an estimated population of 2,705,994 (2018), it is also the most populous city in the Midwestern United States. Chicago is the county seat of Cook County, the second-most-populous county in the US, with a small portion of the northwest side of the city extending into DuPage County near O&amp;rsquo;Hare Airport.</description>
+    </item>
+    
+    <item>
+      <title>Panaji, India</title>
+      <link>https://xxxdgblog.github.io/photos/panaji-india-2/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/photos/panaji-india-2/</guid>
+      <description>Panaji, formerly Panjim, is the capital of the Indian state of Goa and the headquarters of North Goa district. It lies on the banks of the Mandovi River estuary in the Ilhas de Goa sub-district (taluka). With a population of 114,759 in the metropolitan area, Panjim is Goa&amp;rsquo;s largest urban agglomeration, ahead of Margão and Vasco da Gama.</description>
+    </item>
+    
+  </channel>
+</rss>
