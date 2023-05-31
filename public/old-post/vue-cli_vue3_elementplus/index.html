@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-post/vue-cli_vue3_elementplus/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="基于vue3&#43;vue-cli使用element-plus ui库" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-post/vue-cli_vue3_elementplus/" /><meta property="article:published_time" content="2022-12-09T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="基于vue3&#43;vue-cli使用element-plus ui库"/>
+<meta name="twitter:description" content="use element-plus ui"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-post'>old-post</a>/<a href='https://xxxdgblog.github.io/old-post/vue-cli_vue3_elementplus'>vue-cli_vue3_elementplus</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-post/" typeof="ListItem">old-post/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>基于vue3&#43;vue-cli使用element-plus ui库</h1>
+<h1 id="基于vue3vue-cli使用element-plus-ui库">基于vue3+vue-cli使用element-plus ui库</h1>
+<ol>
+<li>安装</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>npm install element-plus --save
+</span></span></code></pre></div><ol start="2">
+<li>1 main.js完整引入，这种情况是我们不在乎webpack打包之后的大小</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ElementPlus</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;element-plus&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;element-plus/dist/index.css&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">ElementPlus</span>)
+</span></span></code></pre></div><ol start="2">
+<li>2.1 自动导入，官方比较推荐的方式</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span> npm install -D unplugin-vue-components unplugin-auto-import
+</span></span></code></pre></div><p>2.2.2  vue.config.js中配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">AutoImport</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;unplugin-auto-import/webpack&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Components</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;unplugin-vue-components/webpack&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">ElementPlusResolver</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;unplugin-vue-components/resolvers&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// const path = require(&#39;path&#39;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">defineConfig</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AutoImport</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resolvers</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">ElementPlusResolver</span>()]
+</span></span><span style="display:flex;"><span>      }),
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Components</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resolvers</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">ElementPlusResolver</span>()]
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>这样我们就可以在template中使用element plus ui的组件了</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202212091517029.png" alt="image-20221209151752992"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202212091516444.png" alt="image-20221209151633313"></p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

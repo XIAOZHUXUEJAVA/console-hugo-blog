@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-post/rust_.strings/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="Rust-Strings" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-post/rust_.strings/" /><meta property="article:published_time" content="2023-02-26T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="Rust-Strings"/>
+<meta name="twitter:description" content="Learn Rust (Just For Fun)"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-post'>old-post</a>/<a href='https://xxxdgblog.github.io/old-post/rust_.strings'>rust_.strings</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-post/" typeof="ListItem">old-post/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>Rust-Strings</h1>
+<h1 id="rust-strings">Rust-Strings</h1>
+<h2 id="string1rs">string1.rs</h2>
+<p>The purpose of the function is to return a string. But in Rust, &ldquo;blue&rdquo; is a string literal value and cannot be used as a return value. In Rust, strings are represented using <code>String</code> type, so it is necessary to create a new instance of <code>String</code> containing the string literal value. This can be achieved using the <code>String::from</code> and <code>&quot;blue.to_string()&quot;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {.
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> answer <span style="color:#f92672">=</span> current_favorite_color();
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;My current favorite color is </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, answer);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">current_favorite_color</span>() -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// &#34;blue&#34;.to_string()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    String::from(<span style="color:#e6db74">&#34;blue&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="string2rs">string2.rs</h2>
+<p>The exercise asks us not to change the line <code>let word = String::from;</code> . From the <code>if</code> statement in <code>main</code> function , we can find that the parameter of the called function is of type <code>String</code>. So we should change <code>&amp;str</code> to <code>String</code> in function<code>is_a_word_color</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> word <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;green&#34;</span>); <span style="color:#75715e">// Try not changing this line :)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> is_a_color_word(word) {
+</span></span><span style="display:flex;"><span>        println!(<span style="color:#e6db74">&#34;That is a color word I know!&#34;</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        println!(<span style="color:#e6db74">&#34;That is not a color word I know.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">is_a_color_word</span>(attempt: String) -&gt; <span style="color:#66d9ef">bool</span> {
+</span></span><span style="display:flex;"><span>    attempt <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;green&#34;</span> <span style="color:#f92672">||</span> attempt <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;blue&#34;</span> <span style="color:#f92672">||</span> attempt <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="string3rs">string3.rs</h2>
+<p>The <code>to_owned</code> method is used to create a new <code>String</code> instance that contains a copy of <code>input</code> parameter. The <code>operator</code> is used to add a new <code>String</code> to created <code>String</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">trim_me</span>(input: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TODO: Remove whitespace from both ends of a string!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    input.trim().to_string()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">compose_me</span>(input: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TODO: Add &#34; world!&#34; to the string! There&#39;s multiple ways to do this!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    input.to_owned() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; world!&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">replace_me</span>(input: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TODO: Replace &#34;cars&#34; in the string with &#34;balloons&#34;!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    input.replace(<span style="color:#e6db74">&#34;cars&#34;</span>, <span style="color:#e6db74">&#34;balloons&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#[cfg(test)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> tests {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">super</span>::<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">trim_a_string</span>() {
+</span></span><span style="display:flex;"><span>        assert_eq!(trim_me(<span style="color:#e6db74">&#34;Hello!     &#34;</span>), <span style="color:#e6db74">&#34;Hello!&#34;</span>);
+</span></span><span style="display:flex;"><span>        assert_eq!(trim_me(<span style="color:#e6db74">&#34;  What&#39;s up!&#34;</span>), <span style="color:#e6db74">&#34;What&#39;s up!&#34;</span>);
+</span></span><span style="display:flex;"><span>        assert_eq!(trim_me(<span style="color:#e6db74">&#34;   Hola!  &#34;</span>), <span style="color:#e6db74">&#34;Hola!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">compose_a_string</span>() {
+</span></span><span style="display:flex;"><span>        assert_eq!(compose_me(<span style="color:#e6db74">&#34;Hello&#34;</span>), <span style="color:#e6db74">&#34;Hello world!&#34;</span>);
+</span></span><span style="display:flex;"><span>        assert_eq!(compose_me(<span style="color:#e6db74">&#34;Goodbye&#34;</span>), <span style="color:#e6db74">&#34;Goodbye world!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">replace_a_string</span>() {
+</span></span><span style="display:flex;"><span>        assert_eq!(replace_me(<span style="color:#e6db74">&#34;I think cars are cool&#34;</span>), <span style="color:#e6db74">&#34;I think balloons are cool&#34;</span>);
+</span></span><span style="display:flex;"><span>        assert_eq!(replace_me(<span style="color:#e6db74">&#34;I love to look at cars&#34;</span>), <span style="color:#e6db74">&#34;I love to look at balloons&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="string4rs">string4.rs</h2>
+<p>The <code>string_slice</code> function takes a string slice <code>&amp;str</code> as an argument and prints it out.</p>
+<p>The <code>string</code> function takes a <code>String</code> argument and prints it out.</p>
+<p>In the <code>main</code> function:</p>
+<ul>
+<li><code>string_slice(&quot;blue&quot;)</code> calls the <code>string_slice</code> function with the string literal &ldquo;blue&rdquo; as an argument.</li>
+<li><code>string(&quot;red&quot;.to_string())</code> calls the <code>string</code> function with the result of calling <code>to_string()</code> on the string literal &ldquo;red&rdquo;.</li>
+<li><code>string(String::from(&quot;hi&quot;))</code> calls the <code>string</code> function with a new <code>String</code> instance created from the string literal &ldquo;hi&rdquo;.</li>
+<li><code>string(&quot;rust is fun!&quot;.to_owned())</code> calls the <code>string</code> function with a new <code>String</code> instance created from the string literal &ldquo;rust is fun!&rdquo; using the <code>to_owned()</code> method.</li>
+<li><code>string(&quot;nice weather&quot;.into())</code> calls the <code>string</code> function with a new <code>String</code> instance created from the string literal &ldquo;nice weather&rdquo; using the <code>into()</code> method.</li>
+<li><code>(format!(&quot;Interpolation {}&quot;, &quot;Station&quot;))</code> creates a new <code>String</code> instance using string interpolation and then discards it (since it&rsquo;s not assigned to a variable or printed out).</li>
+<li><code>string_slice(&amp;String::from(&quot;abc&quot;)[0..1])</code> calls the <code>string_slice</code> function with a string slice of the first character of a new <code>String</code> instance created from the string literal &ldquo;abc&rdquo;.</li>
+<li><code>string_slice(&quot; hello there &quot;.trim())</code> calls the <code>string_slice</code> function with a string slice of the trimmed version of the string literal &quot; hello there &ldquo;.</li>
+<li><code>string(&quot;Happy Monday!&quot;.to_string().replace(&quot;Mon&quot;, &quot;Tues&quot;))</code> calls the <code>string</code> function with a new <code>String</code> instance created from the string literal &ldquo;Happy Monday!&rdquo; with &ldquo;Mon&rdquo; replaced by &ldquo;Tues&rdquo; using the <code>replace</code> method.</li>
+<li><code>string(&quot;mY sHiFt KeY iS sTiCkY&quot;.to_lowercase())</code> calls the <code>string</code> function with a new <code>String</code> instance created from the string literal &ldquo;mY sHiFt KeY iS sTiCkY&rdquo; with all characters converted to lowercase using the <code>to_lowercase</code> method.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">string_slice</span>(arg: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) {
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, arg);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">string</span>(arg: String) {
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, arg);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    string_slice(<span style="color:#e6db74">&#34;blue&#34;</span>);
+</span></span><span style="display:flex;"><span>    string(<span style="color:#e6db74">&#34;red&#34;</span>.to_string());
+</span></span><span style="display:flex;"><span>    string(String::from(<span style="color:#e6db74">&#34;hi&#34;</span>));
+</span></span><span style="display:flex;"><span>    string(<span style="color:#e6db74">&#34;rust is fun!&#34;</span>.to_owned());
+</span></span><span style="display:flex;"><span>    string(<span style="color:#e6db74">&#34;nice weather&#34;</span>.into());
+</span></span><span style="display:flex;"><span>    (format!(<span style="color:#e6db74">&#34;Interpolation </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;Station&#34;</span>));
+</span></span><span style="display:flex;"><span>    string_slice(<span style="color:#f92672">&amp;</span>String::from(<span style="color:#e6db74">&#34;abc&#34;</span>)[<span style="color:#ae81ff">0</span><span style="color:#f92672">..</span><span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span>    string_slice(<span style="color:#e6db74">&#34;  hello there &#34;</span>.trim());
+</span></span><span style="display:flex;"><span>    string(<span style="color:#e6db74">&#34;Happy Monday!&#34;</span>.to_string().replace(<span style="color:#e6db74">&#34;Mon&#34;</span>, <span style="color:#e6db74">&#34;Tues&#34;</span>));
+</span></span><span style="display:flex;"><span>    string(<span style="color:#e6db74">&#34;mY sHiFt KeY iS sTiCkY&#34;</span>.to_lowercase());
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on littlepig</title>
+    <link>https://xxxdgblog.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on littlepig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不同的二叉搜索树</title>
+      <link>https://xxxdgblog.github.io/old-post/unique_binary_search_tree/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/unique_binary_search_tree/</guid>
+      <description>Unique Binary Search Tree</description>
+    </item>
+    
+    <item>
+      <title>整数拆分</title>
+      <link>https://xxxdgblog.github.io/old-post/integer_break/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/integer_break/</guid>
+      <description>Integer Break</description>
+    </item>
+    
+    <item>
+      <title>不同路径II</title>
+      <link>https://xxxdgblog.github.io/old-post/unique_paths_ii/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/unique_paths_ii/</guid>
+      <description>Unique Paths ii</description>
+    </item>
+    
+    <item>
+      <title>不同路径</title>
+      <link>https://xxxdgblog.github.io/old-post/unique_paths/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/unique_paths/</guid>
+      <description>Unique Paths</description>
+    </item>
+    
+    <item>
+      <title>下一个排列</title>
+      <link>https://xxxdgblog.github.io/old-post/next_permutation/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/next_permutation/</guid>
+      <description>Next Permutation</description>
+    </item>
+    
+    <item>
+      <title>反转链表II</title>
+      <link>https://xxxdgblog.github.io/old-post/reverse_linked_lists_ii/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/reverse_linked_lists_ii/</guid>
+      <description>Reverse Linked Lists II</description>
+    </item>
+    
+    <item>
+      <title>使用最小花费爬楼梯</title>
+      <link>https://xxxdgblog.github.io/old-post/min_cost_climbing_stairs/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/min_cost_climbing_stairs/</guid>
+      <description>Min Cost Climbing Stairs</description>
+    </item>
+    
+    <item>
+      <title>最接近的三数之和</title>
+      <link>https://xxxdgblog.github.io/old-post/three_sum_closest/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/three_sum_closest/</guid>
+      <description>Three Sum Closest</description>
+    </item>
+    
+    <item>
+      <title>电话号码字母组合</title>
+      <link>https://xxxdgblog.github.io/old-post/letter_combinations/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/letter_combinations/</guid>
+      <description>Letter Combinations</description>
+    </item>
+    
+    <item>
+      <title>组合总和3-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_combination_sum3/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_combination_sum3/</guid>
+      <description>Review Combination Sum 3</description>
+    </item>
+    
+    <item>
+      <title>合并两个排序链表-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_merge_two_sorted_lists/</link>
+      <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_merge_two_sorted_lists/</guid>
+      <description>Review Merge Two Sorted Lists</description>
+    </item>
+    
+    <item>
+      <title>组合-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_combinations/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_combinations/</guid>
+      <description>Review Combination</description>
+    </item>
+    
+    <item>
+      <title>删除链表中的倒数第N个结点-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_remove_nth_node_from_end/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_remove_nth_node_from_end/</guid>
+      <description>Remove Nth Node From End</description>
+    </item>
+    
+    <item>
+      <title>删除数组中的指定元素-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_remove_element_from_array/</link>
+      <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_remove_element_from_array/</guid>
+      <description>Remove Element From Array</description>
+    </item>
+    
+    <item>
+      <title>复原IP地址</title>
+      <link>https://xxxdgblog.github.io/old-post/restore_ip_addresses/</link>
+      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/restore_ip_addresses/</guid>
+      <description>Restore Ip Addresses</description>
+    </item>
+    
+    <item>
+      <title>分割回文串</title>
+      <link>https://xxxdgblog.github.io/old-post/palindrome_partiton/</link>
+      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/palindrome_partiton/</guid>
+      <description>Palindrome Partition</description>
+    </item>
+    
+    <item>
+      <title>组合总和2</title>
+      <link>https://xxxdgblog.github.io/old-post/combinations_sum2/</link>
+      <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combinations_sum2/</guid>
+      <description>Combination Sum2</description>
+    </item>
+    
+    <item>
+      <title>组合总和</title>
+      <link>https://xxxdgblog.github.io/old-post/combinations_sum/</link>
+      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combinations_sum/</guid>
+      <description>Combination Sum</description>
+    </item>
+    
+    <item>
+      <title>组合-----剪枝优化</title>
+      <link>https://xxxdgblog.github.io/old-post/combine_optimization/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combine_optimization/</guid>
+      <description>Combine Opimization</description>
+    </item>
+    
+    <item>
+      <title>组合</title>
+      <link>https://xxxdgblog.github.io/old-post/combine/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combine/</guid>
+      <description>Combine</description>
+    </item>
+    
+    <item>
+      <title>盛水最多的容器</title>
+      <link>https://xxxdgblog.github.io/old-post/container_with_most_water/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/container_with_most_water/</guid>
+      <description>Container With Most Water</description>
+    </item>
+    
+    <item>
+      <title>三数之和</title>
+      <link>https://xxxdgblog.github.io/old-post/three_nums/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/three_nums/</guid>
+      <description>Three Nums</description>
+    </item>
+    
+    <item>
+      <title>字符串转化为整数</title>
+      <link>https://xxxdgblog.github.io/old-post/string_to_int/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/string_to_int/</guid>
+      <description>String To Int</description>
+    </item>
+    
+    <item>
+      <title>反转整数</title>
+      <link>https://xxxdgblog.github.io/old-post/reverse_integer/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/reverse_integer/</guid>
+      <description>Reverse Integer</description>
+    </item>
+    
+    <item>
+      <title>快速排序</title>
+      <link>https://xxxdgblog.github.io/old-post/quick_sort/</link>
+      <pubDate>Sun, 25 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/quick_sort/</guid>
+      <description>Quick Sort</description>
+    </item>
+    
+    <item>
+      <title>插入排序</title>
+      <link>https://xxxdgblog.github.io/old-post/insertion_sort/</link>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/insertion_sort/</guid>
+      <description>Insertion Sort</description>
+    </item>
+    
+    <item>
+      <title>冒泡排序</title>
+      <link>https://xxxdgblog.github.io/old-post/bubble_sort/</link>
+      <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/bubble_sort/</guid>
+      <description>Bubble Sort</description>
+    </item>
+    
+    <item>
+      <title>寻找两个正序数组的中位数</title>
+      <link>https://xxxdgblog.github.io/old-post/midian_of-_two_sorted_arrays/</link>
+      <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/midian_of-_two_sorted_arrays/</guid>
+      <description>Find Midian Of Two Sorted Arrays</description>
+    </item>
+    
+    <item>
+      <title>删除链表中的倒数第N个结点</title>
+      <link>https://xxxdgblog.github.io/old-post/remove_nth_node_from_end/</link>
+      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/remove_nth_node_from_end/</guid>
+      <description>删除链表中的倒数第 N 个结点 java public ListNode removeNthFromEnd(ListNode head, int n) { ListNode dummy = new ListNode(-1); dummy.next = head; ListNode node = findNthFromEnd(dummy, n + 1); node.next = node.next.next; return dummy.next; } /* * @Title: findNthFromEnd * @Description: 找到我们要删除的结点 * @Author: zdp * @DateTime: 2022/12/16 22:57 * @param head * @param n * @return com.zhu.algorithms.leetcode.base.ListNode * @throws */ public ListNode findNthFromEnd(ListNode head, int n) { ListNode p = head; // 1 2 3 4 5 // 我们要找到倒数第2个元素的话，需要走3步，走5步到达null, 也就是说我们走5 - 2 步 // 首先走2步 for (int i = 0; i &amp;lt; n; i++) { p = p.</description>
+    </item>
+    
+    <item>
+      <title>最长回文子串</title>
+      <link>https://xxxdgblog.github.io/old-post/longest_palindromic_substring/</link>
+      <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/longest_palindromic_substring/</guid>
+      <description>Longest Palindoric Substring</description>
+    </item>
+    
+    <item>
+      <title>无重复字符的最长字串</title>
+      <link>https://xxxdgblog.github.io/old-post/longest_substring_without_repeating/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/longest_substring_without_repeating/</guid>
+      <description>Longest Substring Without Repeating Characters</description>
+    </item>
+    
+    <item>
+      <title>两数相加</title>
+      <link>https://xxxdgblog.github.io/old-post/add_two_nums/</link>
+      <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/add_two_nums/</guid>
+      <description>Add Two Numbers</description>
+    </item>
+    
+    <item>
+      <title>两数之和</title>
+      <link>https://xxxdgblog.github.io/old-post/two_sum/</link>
+      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/two_sum/</guid>
+      <description>Two Sum</description>
+    </item>
+    
+    <item>
+      <title>对称二叉树</title>
+      <link>https://xxxdgblog.github.io/old-post/symmetric_tree/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/symmetric_tree/</guid>
+      <description>Symmetric Binary Tree</description>
+    </item>
+    
+    <item>
+      <title>二叉树的最小深度</title>
+      <link>https://xxxdgblog.github.io/old-post/min_depth_in_binary_tree/</link>
+      <pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/min_depth_in_binary_tree/</guid>
+      <description>Min Depth of Binary Tree</description>
+    </item>
+    
+    <item>
+      <title>全排列</title>
+      <link>https://xxxdgblog.github.io/old-post/permutations/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/permutations/</guid>
+      <description>Permutations</description>
+    </item>
+    
+    <item>
+      <title>二叉搜索树中插入元素</title>
+      <link>https://xxxdgblog.github.io/old-post/insert_into_bst/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/insert_into_bst/</guid>
+      <description>Insert Element Into BST</description>
+    </item>
+    
+    <item>
+      <title>二叉搜索树中搜索元素</title>
+      <link>https://xxxdgblog.github.io/old-post/search_in_bst/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/search_in_bst/</guid>
+      <description>Search In BST</description>
+    </item>
+    
+    <item>
+      <title>验证二叉搜索树的合法性</title>
+      <link>https://xxxdgblog.github.io/old-post/validate_bst/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/validate_bst/</guid>
+      <description>Validate BST</description>
+    </item>
+    
+    <item>
+      <title>二叉搜索树中第k小的元素</title>
+      <link>https://xxxdgblog.github.io/old-post/kth_smallest_in_bst/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/kth_smallest_in_bst/</guid>
+      <description>Kth Smallest In BST</description>
+    </item>
+    
+    <item>
+      <title>二叉树的层序遍历</title>
+      <link>https://xxxdgblog.github.io/old-post/binary_tree_level_traverse/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/binary_tree_level_traverse/</guid>
+      <description>Binary Tree Level traverse</description>
+    </item>
+    
+    <item>
+      <title>求二叉树的最大深度和直径</title>
+      <link>https://xxxdgblog.github.io/old-post/max_depth_diameter_in_tree/</link>
+      <pubDate>Sun, 20 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/max_depth_diameter_in_tree/</guid>
+      <description>Max Depth And Diameter In Binary Tree</description>
+    </item>
+    
+    <item>
+      <title>从前序与中序序列构建二叉树</title>
+      <link>https://xxxdgblog.github.io/old-post/build_tree_pre_in/</link>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/build_tree_pre_in/</guid>
+      <description>Build Binary Tree From Preorder and Inorder</description>
+    </item>
+    
+    <item>
+      <title>合并两个有序的单链表</title>
+      <link>https://xxxdgblog.github.io/old-post/merge_two_sorted_lists/</link>
+      <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/merge_two_sorted_lists/</guid>
+      <description>Merge Two Sorted Lists to a New Lists</description>
+    </item>
+    
+    <item>
+      <title>找到单链表中结点的中点</title>
+      <link>https://xxxdgblog.github.io/old-post/the_middle_node_of_linkedlist/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/the_middle_node_of_linkedlist/</guid>
+      <description>To Find The Middle Node From Singly Linked List</description>
+    </item>
+    
+    <item>
+      <title>cpp singlylinkedlist</title>
+      <link>https://xxxdgblog.github.io/old-post/cpp/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/cpp/</guid>
+      <description>SinglyLinkedList Example of Cpp</description>
+    </item>
+    
+    <item>
+      <title>删除二叉搜索树中的结点</title>
+      <link>https://xxxdgblog.github.io/old-post/delete_node_in_bst/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/delete_node_in_bst/</guid>
+      <description>Delete Node In BST</description>
+    </item>
+    
+  </channel>
+</rss>

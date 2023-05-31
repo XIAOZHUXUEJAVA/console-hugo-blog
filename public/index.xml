@@ -22,7 +22,1006 @@
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xxxdgblog.github.io/posts/introduction/</guid>
-      <description>&lt;p&gt;由于近期为敏感时期，我的个人部署在&lt;code&gt;Netlify&lt;/code&gt;站点陆续被墙，于是使用&lt;code&gt;Hugo&lt;/code&gt;简单实现了一个替代品&lt;/p&gt;</description>
+      <description>&lt;p&gt;由于某些特殊情况，我的个人部署在&lt;code&gt;Netlify&lt;/code&gt;站点陆续被墙，于是使用&lt;code&gt;Hugo&lt;/code&gt;简单实现了一个替代品&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Netlify被ban了，我的个人网站在国内不能访问了！</title>
+      <link>https://xxxdgblog.github.io/old-post/netlify_ban/</link>
+      <pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/netlify_ban/</guid>
+      <description>The Wall Is Getting Taller</description>
+    </item>
+    
+    <item>
+      <title>成为小阳人有感</title>
+      <link>https://xxxdgblog.github.io/old-post/%E9%98%B3%E4%BA%86/</link>
+      <pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/%E9%98%B3%E4%BA%86/</guid>
+      <description>COVID-19</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(九) - Cookie技术</title>
+      <link>https://xxxdgblog.github.io/old-post/cookie/</link>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/cookie/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(八) - 什么是Context上下文?</title>
+      <link>https://xxxdgblog.github.io/old-post/context/</link>
+      <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/context/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(七) - FPS与刷新率：有什么区别与联系？</title>
+      <link>https://xxxdgblog.github.io/old-post/%E5%88%B7%E6%96%B0%E7%8E%87%E5%92%8Cfps%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</link>
+      <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/%E5%88%B7%E6%96%B0%E7%8E%87%E5%92%8Cfps%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(六) - Git冲突解决方案</title>
+      <link>https://xxxdgblog.github.io/old-post/git%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/git%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(五) - 为什么有些网址存在大量的百分号、字母和数字？</title>
+      <link>https://xxxdgblog.github.io/old-post/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E7%BD%91%E5%9D%80%E6%9C%89%E4%BA%9B%E6%80%AA/</link>
+      <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E7%BD%91%E5%9D%80%E6%9C%89%E4%BA%9B%E6%80%AA/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(四) - 面向对象和面向过程哪个性能高?</title>
+      <link>https://xxxdgblog.github.io/old-post/%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%A7%E8%83%BD/</link>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%A7%E8%83%BD/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>ChatBot出现报错的解决方案</title>
+      <link>https://xxxdgblog.github.io/old-post/chat%E5%87%BA%E7%8E%B0%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/chat%E5%87%BA%E7%8E%B0%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>Solution to ChatBot Bug</description>
+    </item>
+    
+    <item>
+      <title>Rust中的一些比较常用的基础语法(持续更新)</title>
+      <link>https://xxxdgblog.github.io/old-post/rust_syntax/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust_syntax/</guid>
+      <description>Commonly Used Syntax in Rust</description>
+    </item>
+    
+    <item>
+      <title>决定使用小鹤双拼</title>
+      <link>https://xxxdgblog.github.io/old-post/xiaoheshuangpin/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/xiaoheshuangpin/</guid>
+      <description>Change The Way I Type</description>
+    </item>
+    
+    <item>
+      <title>WSL2，显示 [已退出进程，代码为 4294967295] 的解决方案(NEW)</title>
+      <link>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_3/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_3/</guid>
+      <description>record a bug in wsl2</description>
+    </item>
+    
+    <item>
+      <title>Three Sum Review</title>
+      <link>https://xxxdgblog.github.io/old-post/three_sum_review/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/three_sum_review/</guid>
+      <description>Three Sum Review</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(三) - HTTP 状态码</title>
+      <link>https://xxxdgblog.github.io/old-post/http_status/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/http_status/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(二) - 为什么Ping不通外网?</title>
+      <link>https://xxxdgblog.github.io/old-post/ping/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ping/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>每日小知识点(一) - 服务器</title>
+      <link>https://xxxdgblog.github.io/old-post/webserver_applicationserver/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/webserver_applicationserver/</guid>
+      <description>Daily Little Knowledge Points</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-算法篇-Day07</title>
+      <link>https://xxxdgblog.github.io/old-post/offer_day_07/</link>
+      <pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/offer_day_07/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>Surf Internet In Linux</title>
+      <link>https://xxxdgblog.github.io/old-post/surf_internet/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/surf_internet/</guid>
+      <description>Surf Internet In Linux</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-算法篇-Day06</title>
+      <link>https://xxxdgblog.github.io/old-post/offer_day_06/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/offer_day_06/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-算法篇-Day05</title>
+      <link>https://xxxdgblog.github.io/old-post/offer_day_05/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/offer_day_05/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-面试题篇-Day02</title>
+      <link>https://xxxdgblog.github.io/old-post/base_offer_day_02/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/base_offer_day_02/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-算法篇-Day04</title>
+      <link>https://xxxdgblog.github.io/old-post/offer_day_04/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/offer_day_04/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-算法篇-Day03</title>
+      <link>https://xxxdgblog.github.io/old-post/offer_day_03/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/offer_day_03/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-面试题篇-Day01</title>
+      <link>https://xxxdgblog.github.io/old-post/base_offer_day_01/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/base_offer_day_01/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>Mybatis Quick Start</title>
+      <link>https://xxxdgblog.github.io/old-post/mybatis_quick_start/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/mybatis_quick_start/</guid>
+      <description>Mabaits Simple Demo</description>
+    </item>
+    
+    <item>
+      <title>React 每日一练</title>
+      <link>https://xxxdgblog.github.io/old-post/react_exercise_03/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/react_exercise_03/</guid>
+      <description>React Daily Exercise</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu20.04 Install MySQL8  ERROR 2002 (HY000)</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_install_mysql/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_install_mysql/</guid>
+      <description>Docker Ubuntu Container SetUp</description>
+    </item>
+    
+    <item>
+      <title>不同的二叉搜索树</title>
+      <link>https://xxxdgblog.github.io/old-post/unique_binary_search_tree/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/unique_binary_search_tree/</guid>
+      <description>Unique Binary Search Tree</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-算法篇-Day02</title>
+      <link>https://xxxdgblog.github.io/old-post/offer_day_02/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/offer_day_02/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>剑指Offer-算法篇-Day01</title>
+      <link>https://xxxdgblog.github.io/old-post/offer_day_01/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/offer_day_01/</guid>
+      <description>For Job</description>
+    </item>
+    
+    <item>
+      <title>20230310感慨</title>
+      <link>https://xxxdgblog.github.io/old-post/2023_03_10_summary/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/2023_03_10_summary/</guid>
+      <description>No Summary</description>
+    </item>
+    
+    <item>
+      <title>React 每日一练</title>
+      <link>https://xxxdgblog.github.io/old-post/react_exercise_02/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/react_exercise_02/</guid>
+      <description>React Daily Exercise</description>
+    </item>
+    
+    <item>
+      <title>整数拆分</title>
+      <link>https://xxxdgblog.github.io/old-post/integer_break/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/integer_break/</guid>
+      <description>Integer Break</description>
+    </item>
+    
+    <item>
+      <title>2023-03-09-总结</title>
+      <link>https://xxxdgblog.github.io/old-post/2023_03_09/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/2023_03_09/</guid>
+      <description>Today And Tomorrow</description>
+    </item>
+    
+    <item>
+      <title>React 每日一练</title>
+      <link>https://xxxdgblog.github.io/old-post/react_exercise_01/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/react_exercise_01/</guid>
+      <description>React Daily Exercise</description>
+    </item>
+    
+    <item>
+      <title>不同路径II</title>
+      <link>https://xxxdgblog.github.io/old-post/unique_paths_ii/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/unique_paths_ii/</guid>
+      <description>Unique Paths ii</description>
+    </item>
+    
+    <item>
+      <title>不同路径</title>
+      <link>https://xxxdgblog.github.io/old-post/unique_paths/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/unique_paths/</guid>
+      <description>Unique Paths</description>
+    </item>
+    
+    <item>
+      <title>Golang-goroutine</title>
+      <link>https://xxxdgblog.github.io/old-post/go_goroutine/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/go_goroutine/</guid>
+      <description>Learn Go</description>
+    </item>
+    
+    <item>
+      <title>一些必知必会的算法(1)</title>
+      <link>https://xxxdgblog.github.io/old-post/simple_algorithms/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/simple_algorithms/</guid>
+      <description>Simple Algorithms</description>
+    </item>
+    
+    <item>
+      <title>Happy Birthday</title>
+      <link>https://xxxdgblog.github.io/old-post/2023_birthday/</link>
+      <pubDate>Sat, 04 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/2023_birthday/</guid>
+      <description>Happy Birthday</description>
+    </item>
+    
+    <item>
+      <title>下一个排列</title>
+      <link>https://xxxdgblog.github.io/old-post/next_permutation/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/next_permutation/</guid>
+      <description>Next Permutation</description>
+    </item>
+    
+    <item>
+      <title>笔记本电脑 Windows 10 使用wifi 显示&#34;无法连接这个网络&#34;的解决方案</title>
+      <link>https://xxxdgblog.github.io/old-post/windows_wifi_connection_problems/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/windows_wifi_connection_problems/</guid>
+      <description>I can not afford to buy an Apple Computer</description>
+    </item>
+    
+    <item>
+      <title>Rust-Modules</title>
+      <link>https://xxxdgblog.github.io/old-post/rust_modules/</link>
+      <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust_modules/</guid>
+      <description>Learn Rust (Just For Fun)</description>
+    </item>
+    
+    <item>
+      <title>Rust-Strings</title>
+      <link>https://xxxdgblog.github.io/old-post/rust_.strings/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust_.strings/</guid>
+      <description>Learn Rust (Just For Fun)</description>
+    </item>
+    
+    <item>
+      <title>反转链表II</title>
+      <link>https://xxxdgblog.github.io/old-post/reverse_linked_lists_ii/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/reverse_linked_lists_ii/</guid>
+      <description>Reverse Linked Lists II</description>
+    </item>
+    
+    <item>
+      <title>Rustlings-Enums</title>
+      <link>https://xxxdgblog.github.io/old-post/rust-enums/</link>
+      <pubDate>Sat, 25 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust-enums/</guid>
+      <description>Learn Rust (Just For Fun)</description>
+    </item>
+    
+    <item>
+      <title>Rust-Structs</title>
+      <link>https://xxxdgblog.github.io/old-post/rust_struct/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust_struct/</guid>
+      <description>Learn Rust (Just For Fun)</description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://xxxdgblog.github.io/old-post/test/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/test/</guid>
+      <description>TEST</description>
+    </item>
+    
+    <item>
+      <title>Rustlings-Move-Semantics</title>
+      <link>https://xxxdgblog.github.io/old-post/rust_move_semantics/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust_move_semantics/</guid>
+      <description>Learn Rust (Just For Fun)</description>
+    </item>
+    
+    <item>
+      <title>WSL2暴露端口给主机，在主机的浏览器中访问该端口</title>
+      <link>https://xxxdgblog.github.io/old-post/wsl2_expose_port_to_localhost/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/wsl2_expose_port_to_localhost/</guid>
+      <description>WSL2 Expose Port To Localhost</description>
+    </item>
+    
+    <item>
+      <title>感慨一下</title>
+      <link>https://xxxdgblog.github.io/old-post/2023_02_22/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/2023_02_22/</guid>
+      <description>No Summary</description>
+    </item>
+    
+    <item>
+      <title>Rustlings-Vecs</title>
+      <link>https://xxxdgblog.github.io/old-post/rust_vecs/</link>
+      <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust_vecs/</guid>
+      <description>Learn Rust (Just For Fun)</description>
+    </item>
+    
+    <item>
+      <title>使用最小花费爬楼梯</title>
+      <link>https://xxxdgblog.github.io/old-post/min_cost_climbing_stairs/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/min_cost_climbing_stairs/</guid>
+      <description>Min Cost Climbing Stairs</description>
+    </item>
+    
+    <item>
+      <title>Rustlings-Variables</title>
+      <link>https://xxxdgblog.github.io/old-post/rust_variables/</link>
+      <pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/rust_variables/</guid>
+      <description>Learn Rust (Just For Fun)</description>
+    </item>
+    
+    <item>
+      <title>最接近的三数之和</title>
+      <link>https://xxxdgblog.github.io/old-post/three_sum_closest/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/three_sum_closest/</guid>
+      <description>Three Sum Closest</description>
+    </item>
+    
+    <item>
+      <title>两两交换链表中的结点</title>
+      <link>https://xxxdgblog.github.io/old-post/swap_nodes_in_pairs/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/swap_nodes_in_pairs/</guid>
+      <description>Swap Nodes in Pairs</description>
+    </item>
+    
+    <item>
+      <title>相交链表-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_intersection_node/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_intersection_node/</guid>
+      <description>Get Intersection Node</description>
+    </item>
+    
+    <item>
+      <title>电话号码字母组合</title>
+      <link>https://xxxdgblog.github.io/old-post/letter_combinations/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/letter_combinations/</guid>
+      <description>Letter Combinations</description>
+    </item>
+    
+    <item>
+      <title>组合总和3-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_combination_sum3/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_combination_sum3/</guid>
+      <description>Review Combination Sum 3</description>
+    </item>
+    
+    <item>
+      <title>合并两个排序链表-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_merge_two_sorted_lists/</link>
+      <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_merge_two_sorted_lists/</guid>
+      <description>Review Merge Two Sorted Lists</description>
+    </item>
+    
+    <item>
+      <title>组合-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_combinations/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_combinations/</guid>
+      <description>Review Combination</description>
+    </item>
+    
+    <item>
+      <title>删除链表中的倒数第N个结点-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_remove_nth_node_from_end/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_remove_nth_node_from_end/</guid>
+      <description>Remove Nth Node From End</description>
+    </item>
+    
+    <item>
+      <title>删除数组中的指定元素-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_remove_element_from_array/</link>
+      <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_remove_element_from_array/</guid>
+      <description>Remove Element From Array</description>
+    </item>
+    
+    <item>
+      <title>复原IP地址</title>
+      <link>https://xxxdgblog.github.io/old-post/restore_ip_addresses/</link>
+      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/restore_ip_addresses/</guid>
+      <description>Restore Ip Addresses</description>
+    </item>
+    
+    <item>
+      <title>新年快乐</title>
+      <link>https://xxxdgblog.github.io/old-post/new_year/</link>
+      <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/new_year/</guid>
+      <description>Happy New Year</description>
+    </item>
+    
+    <item>
+      <title>分割回文串</title>
+      <link>https://xxxdgblog.github.io/old-post/palindrome_partiton/</link>
+      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/palindrome_partiton/</guid>
+      <description>Palindrome Partition</description>
+    </item>
+    
+    <item>
+      <title>组合总和2</title>
+      <link>https://xxxdgblog.github.io/old-post/combinations_sum2/</link>
+      <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combinations_sum2/</guid>
+      <description>Combination Sum2</description>
+    </item>
+    
+    <item>
+      <title>组合总和</title>
+      <link>https://xxxdgblog.github.io/old-post/combinations_sum/</link>
+      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combinations_sum/</guid>
+      <description>Combination Sum</description>
+    </item>
+    
+    <item>
+      <title>组合-----剪枝优化</title>
+      <link>https://xxxdgblog.github.io/old-post/combine_optimization/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combine_optimization/</guid>
+      <description>Combine Opimization</description>
+    </item>
+    
+    <item>
+      <title>小年快乐</title>
+      <link>https://xxxdgblog.github.io/old-post/off_year/</link>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/off_year/</guid>
+      <description>Off Year</description>
+    </item>
+    
+    <item>
+      <title>组合</title>
+      <link>https://xxxdgblog.github.io/old-post/combine/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/combine/</guid>
+      <description>Combine</description>
+    </item>
+    
+    <item>
+      <title>盛水最多的容器</title>
+      <link>https://xxxdgblog.github.io/old-post/container_with_most_water/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/container_with_most_water/</guid>
+      <description>Container With Most Water</description>
+    </item>
+    
+    <item>
+      <title>三数之和</title>
+      <link>https://xxxdgblog.github.io/old-post/three_nums/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/three_nums/</guid>
+      <description>Three Nums</description>
+    </item>
+    
+    <item>
+      <title>字符串转化为整数</title>
+      <link>https://xxxdgblog.github.io/old-post/string_to_int/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/string_to_int/</guid>
+      <description>String To Int</description>
+    </item>
+    
+    <item>
+      <title>反转整数</title>
+      <link>https://xxxdgblog.github.io/old-post/reverse_integer/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/reverse_integer/</guid>
+      <description>Reverse Integer</description>
+    </item>
+    
+    <item>
+      <title>New Year</title>
+      <link>https://xxxdgblog.github.io/old-post/happy_new_year/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/happy_new_year/</guid>
+      <description>New Year</description>
+    </item>
+    
+    <item>
+      <title>工具分享(持续更新)</title>
+      <link>https://xxxdgblog.github.io/old-post/tools/</link>
+      <pubDate>Thu, 29 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/tools/</guid>
+      <description>Useful Websites and Software</description>
+    </item>
+    
+    <item>
+      <title>2022总结</title>
+      <link>https://xxxdgblog.github.io/old-post/2022_review/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/2022_review/</guid>
+      <description>Annual Review</description>
+    </item>
+    
+    <item>
+      <title>快速排序</title>
+      <link>https://xxxdgblog.github.io/old-post/quick_sort/</link>
+      <pubDate>Sun, 25 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/quick_sort/</guid>
+      <description>Quick Sort</description>
+    </item>
+    
+    <item>
+      <title>插入排序</title>
+      <link>https://xxxdgblog.github.io/old-post/insertion_sort/</link>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/insertion_sort/</guid>
+      <description>Insertion Sort</description>
+    </item>
+    
+    <item>
+      <title>TypeScript &#43; Vue3 Demo</title>
+      <link>https://xxxdgblog.github.io/old-post/typescript_vue3/</link>
+      <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/typescript_vue3/</guid>
+      <description>Learn TypeScript And Vue3</description>
+    </item>
+    
+    <item>
+      <title>冒泡排序</title>
+      <link>https://xxxdgblog.github.io/old-post/bubble_sort/</link>
+      <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/bubble_sort/</guid>
+      <description>Bubble Sort</description>
+    </item>
+    
+    <item>
+      <title>使用Shell脚本文件配置Docker Ubuntu Container</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_shell/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_shell/</guid>
+      <description>Docker Ubuntu Container SetUp Use Shell</description>
+    </item>
+    
+    <item>
+      <title>Learn Vim</title>
+      <link>https://xxxdgblog.github.io/old-post/learn_vim/</link>
+      <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/learn_vim/</guid>
+      <description>Learning Vim Is A Long Journey</description>
+    </item>
+    
+    <item>
+      <title>寻找两个正序数组的中位数</title>
+      <link>https://xxxdgblog.github.io/old-post/midian_of-_two_sorted_arrays/</link>
+      <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/midian_of-_two_sorted_arrays/</guid>
+      <description>Find Midian Of Two Sorted Arrays</description>
+    </item>
+    
+    <item>
+      <title>git分支的使用和如何回滚你的代码</title>
+      <link>https://xxxdgblog.github.io/old-post/git_branch/</link>
+      <pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/git_branch/</guid>
+      <description>git branch and roll back your code</description>
+    </item>
+    
+    <item>
+      <title>删除链表中的倒数第N个结点</title>
+      <link>https://xxxdgblog.github.io/old-post/remove_nth_node_from_end/</link>
+      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/remove_nth_node_from_end/</guid>
+      <description>删除链表中的倒数第 N 个结点 java public ListNode removeNthFromEnd(ListNode head, int n) { ListNode dummy = new ListNode(-1); dummy.next = head; ListNode node = findNthFromEnd(dummy, n + 1); node.next = node.next.next; return dummy.next; } /* * @Title: findNthFromEnd * @Description: 找到我们要删除的结点 * @Author: zdp * @DateTime: 2022/12/16 22:57 * @param head * @param n * @return com.zhu.algorithms.leetcode.base.ListNode * @throws */ public ListNode findNthFromEnd(ListNode head, int n) { ListNode p = head; // 1 2 3 4 5 // 我们要找到倒数第2个元素的话，需要走3步，走5步到达null, 也就是说我们走5 - 2 步 // 首先走2步 for (int i = 0; i &amp;lt; n; i++) { p = p.</description>
+    </item>
+    
+    <item>
+      <title>最长回文子串</title>
+      <link>https://xxxdgblog.github.io/old-post/longest_palindromic_substring/</link>
+      <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/longest_palindromic_substring/</guid>
+      <description>Longest Palindoric Substring</description>
+    </item>
+    
+    <item>
+      <title>docker 完善一个Ubuntu容器</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_setup/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_setup/</guid>
+      <description>Docker Ubuntu Container SetUp</description>
+    </item>
+    
+    <item>
+      <title>无重复字符的最长字串</title>
+      <link>https://xxxdgblog.github.io/old-post/longest_substring_without_repeating/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/longest_substring_without_repeating/</guid>
+      <description>Longest Substring Without Repeating Characters</description>
+    </item>
+    
+    <item>
+      <title>两数相加</title>
+      <link>https://xxxdgblog.github.io/old-post/add_two_nums/</link>
+      <pubDate>Sun, 11 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/add_two_nums/</guid>
+      <description>Add Two Numbers</description>
+    </item>
+    
+    <item>
+      <title>基于vue3&#43;vue-cli使用element-plus ui库</title>
+      <link>https://xxxdgblog.github.io/old-post/vue-cli_vue3_elementplus/</link>
+      <pubDate>Fri, 09 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/vue-cli_vue3_elementplus/</guid>
+      <description>use element-plus ui</description>
+    </item>
+    
+    <item>
+      <title>记录一个wsl2的BUG, 已解决</title>
+      <link>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_2/</link>
+      <pubDate>Fri, 09 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_2/</guid>
+      <description>record a bug in wsl2</description>
+    </item>
+    
+    <item>
+      <title>两数之和</title>
+      <link>https://xxxdgblog.github.io/old-post/two_sum/</link>
+      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/two_sum/</guid>
+      <description>Two Sum</description>
+    </item>
+    
+    <item>
+      <title>对称二叉树</title>
+      <link>https://xxxdgblog.github.io/old-post/symmetric_tree/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/symmetric_tree/</guid>
+      <description>Symmetric Binary Tree</description>
+    </item>
+    
+    <item>
+      <title>二叉树的最小深度</title>
+      <link>https://xxxdgblog.github.io/old-post/min_depth_in_binary_tree/</link>
+      <pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/min_depth_in_binary_tree/</guid>
+      <description>Min Depth of Binary Tree</description>
+    </item>
+    
+    <item>
+      <title>全排列</title>
+      <link>https://xxxdgblog.github.io/old-post/permutations/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/permutations/</guid>
+      <description>Permutations</description>
+    </item>
+    
+    <item>
+      <title>二叉搜索树中插入元素</title>
+      <link>https://xxxdgblog.github.io/old-post/insert_into_bst/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/insert_into_bst/</guid>
+      <description>Insert Element Into BST</description>
+    </item>
+    
+    <item>
+      <title>二叉搜索树中搜索元素</title>
+      <link>https://xxxdgblog.github.io/old-post/search_in_bst/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/search_in_bst/</guid>
+      <description>Search In BST</description>
+    </item>
+    
+    <item>
+      <title>验证二叉搜索树的合法性</title>
+      <link>https://xxxdgblog.github.io/old-post/validate_bst/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/validate_bst/</guid>
+      <description>Validate BST</description>
+    </item>
+    
+    <item>
+      <title>二叉搜索树中第k小的元素</title>
+      <link>https://xxxdgblog.github.io/old-post/kth_smallest_in_bst/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/kth_smallest_in_bst/</guid>
+      <description>Kth Smallest In BST</description>
+    </item>
+    
+    <item>
+      <title>二叉树的层序遍历</title>
+      <link>https://xxxdgblog.github.io/old-post/binary_tree_level_traverse/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/binary_tree_level_traverse/</guid>
+      <description>Binary Tree Level traverse</description>
+    </item>
+    
+    <item>
+      <title>记录一个wsl2的BUG</title>
+      <link>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_1/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_1/</guid>
+      <description>record a bug in wsl2</description>
+    </item>
+    
+    <item>
+      <title>求二叉树的最大深度和直径</title>
+      <link>https://xxxdgblog.github.io/old-post/max_depth_diameter_in_tree/</link>
+      <pubDate>Sun, 20 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/max_depth_diameter_in_tree/</guid>
+      <description>Max Depth And Diameter In Binary Tree</description>
+    </item>
+    
+    <item>
+      <title>SpirngBoot启动Banner设置</title>
+      <link>https://xxxdgblog.github.io/old-post/springboot_banner/</link>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/springboot_banner/</guid>
+      <description>SpirngBoot启动Banner设置</description>
+    </item>
+    
+    <item>
+      <title>从前序与中序序列构建二叉树</title>
+      <link>https://xxxdgblog.github.io/old-post/build_tree_pre_in/</link>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/build_tree_pre_in/</guid>
+      <description>Build Binary Tree From Preorder and Inorder</description>
+    </item>
+    
+    <item>
+      <title>合并两个有序的单链表</title>
+      <link>https://xxxdgblog.github.io/old-post/merge_two_sorted_lists/</link>
+      <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/merge_two_sorted_lists/</guid>
+      <description>Merge Two Sorted Lists to a New Lists</description>
+    </item>
+    
+    <item>
+      <title>docker容器化golang应用</title>
+      <link>https://xxxdgblog.github.io/old-post/docker_container_golang/</link>
+      <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/docker_container_golang/</guid>
+      <description>Containerize your golang application</description>
+    </item>
+    
+    <item>
+      <title>Windows NVM node管理工具的使用</title>
+      <link>https://xxxdgblog.github.io/old-post/nvm/</link>
+      <pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/nvm/</guid>
+      <description>To save and push docker container</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</guid>
+      <description>Configure environment variables and zsh on ubuntu linux</description>
+    </item>
+    
+    <item>
+      <title>找到单链表中结点的中点</title>
+      <link>https://xxxdgblog.github.io/old-post/the_middle_node_of_linkedlist/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/the_middle_node_of_linkedlist/</guid>
+      <description>To Find The Middle Node From Singly Linked List</description>
     </item>
     
     <item>
@@ -32,56 +1031,91 @@
       
       <guid>https://xxxdgblog.github.io/about/</guid>
       <description>A Simple Blog With Hugo
-name: xiaozhu
-hobby: music
-other sites:
+Name: xiaozhu
+Hobby: Music
+Other Sites:
 https://xxxdgblog.netlify.app/blog
-https://chat-xiaozhu.netlify.app/zh</description>
+https://chat-xiaozhu.netlify.app/zh
+GitHub: https://github.com/XIAOZHUXUEJAVA
+Mail: im.zhu.dong.peng@gmail.com</description>
     </item>
     
     <item>
-      <title>Hel, Poland</title>
-      <link>https://xxxdgblog.github.io/photos/hel-poland-3/</link>
-      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      <title>cpp singlylinkedlist</title>
+      <link>https://xxxdgblog.github.io/old-post/cpp/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/photos/hel-poland-3/</guid>
-      <description>Hel Peninsula (Polish: Mierzeja Helska) is a 35-km-long sand bar peninsula in northern Poland separating the Bay of Puck from the open Baltic Sea. The width of the peninsula varies from approximately 300 m near Jurata, through 100 m in the most narrow part to over 3 km at the tip. Since the peninsula was formed entirely of sand, it is frequently turned into an island by winter storms. Until the 17th century the peninsula was a chain of islands that formed a strip of land only during the summer.</description>
+      <guid>https://xxxdgblog.github.io/old-post/cpp/</guid>
+      <description>SinglyLinkedList Example of Cpp</description>
     </item>
     
     <item>
-      <title>Hel, Poland</title>
-      <link>https://xxxdgblog.github.io/photos/hel-poland-2/</link>
-      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      <title>docker 容器和镜像的备份</title>
+      <link>https://xxxdgblog.github.io/old-post/dockerpush/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/photos/hel-poland-2/</guid>
-      <description>Hel Peninsula (Polish: Mierzeja Helska) is a 35-km-long sand bar peninsula in northern Poland separating the Bay of Puck from the open Baltic Sea. The width of the peninsula varies from approximately 300 m near Jurata, through 100 m in the most narrow part to over 3 km at the tip. Since the peninsula was formed entirely of sand, it is frequently turned into an island by winter storms. Until the 17th century the peninsula was a chain of islands that formed a strip of land only during the summer.</description>
+      <guid>https://xxxdgblog.github.io/old-post/dockerpush/</guid>
+      <description>To save and push docker container</description>
     </item>
     
     <item>
-      <title>Arizona, US</title>
-      <link>https://xxxdgblog.github.io/photos/arizona-us/</link>
+      <title>docker 运行一个Ubuntu 容器 无法启动的问题</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_container_start_error/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_container_start_error/</guid>
+      <description>To solve the problem that ubuntu_container_start_error</description>
+    </item>
+    
+    <item>
+      <title>github&#43;typora&#43;picgo</title>
+      <link>https://xxxdgblog.github.io/old-post/github_typora_picgo/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/github_typora_picgo/</guid>
+      <description>To Build a personal picture bed</description>
+    </item>
+    
+    <item>
+      <title>Manchester by the sea</title>
+      <link>https://xxxdgblog.github.io/photos/manchester-by-the-sea/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/photos/arizona-us/</guid>
-      <description>The Grand Canyon is a steep-sided canyon carved by the Colorado River in Arizona, United States. The canyon is 277 miles (446 km) long, up to 18 miles (29 km) wide and attains a depth of over a mile (6,093 feet or 1,857 meters).</description>
+      <guid>https://xxxdgblog.github.io/photos/manchester-by-the-sea/</guid>
+      <description>《海边的曼彻斯特》
+有些错误无法弥补，有些失去永远无法得偿。
+面对生活中的悲伤，罗曼罗兰所言：世上只有一种英雄主义,就是在认清生活真相之后,依然热爱生活。
+但是，在认清生活的的真相后，让悲伤依旧是悲伤，让痛苦依旧是痛苦，也是一种选择吧，陷入无尽的悔恨和痛苦中，可能才会弥补些许 对自己所犯的过错的 愧疚。
+电影里的男主便是第二种态度，或许这也没有什么错。
+有时候我们不能走出悲伤和痛苦，可能这就是你要付出的代价吧。
+但是我们还是应该像男主的侄子那样，从生活中寻找走出悲伤的可能。</description>
     </item>
     
     <item>
-      <title>Chicago, US</title>
-      <link>https://xxxdgblog.github.io/photos/chicago-us/</link>
-      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Go Home</title>
+      <link>https://xxxdgblog.github.io/old-post/go_home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/photos/chicago-us/</guid>
-      <description>Chicago, officially the City of Chicago, is the most populous city in the U.S. state of Illinois, and the third-most-populous city in the United States. With an estimated population of 2,705,994 (2018), it is also the most populous city in the Midwestern United States. Chicago is the county seat of Cook County, the second-most-populous county in the US, with a small portion of the northwest side of the city extending into DuPage County near O&amp;rsquo;Hare Airport.</description>
+      <guid>https://xxxdgblog.github.io/old-post/go_home/</guid>
+      <description>go home</description>
     </item>
     
     <item>
-      <title>Panaji, India</title>
-      <link>https://xxxdgblog.github.io/photos/panaji-india-2/</link>
-      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      <title>删除二叉搜索树中的结点</title>
+      <link>https://xxxdgblog.github.io/old-post/delete_node_in_bst/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/photos/panaji-india-2/</guid>
-      <description>Panaji, formerly Panjim, is the capital of the Indian state of Goa and the headquarters of North Goa district. It lies on the banks of the Mandovi River estuary in the Ilhas de Goa sub-district (taluka). With a population of 114,759 in the metropolitan area, Panjim is Goa&amp;rsquo;s largest urban agglomeration, ahead of Margão and Vasco da Gama.</description>
+      <guid>https://xxxdgblog.github.io/old-post/delete_node_in_bst/</guid>
+      <description>Delete Node In BST</description>
+    </item>
+    
+    <item>
+      <title>搜索旋转数组</title>
+      <link>https://xxxdgblog.github.io/old-post/search_in_rotated_sorted_array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/search_in_rotated_sorted_array/</guid>
+      <description>Search in Rotated Sorted Array</description>
     </item>
     
   </channel>

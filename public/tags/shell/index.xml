@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on littlepig</title>
+    <link>https://xxxdgblog.github.io/tags/shell/</link>
+    <description>Recent content in shell on littlepig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</guid>
+      <description>Configure environment variables and zsh on ubuntu linux</description>
+    </item>
+    
+  </channel>
+</rss>

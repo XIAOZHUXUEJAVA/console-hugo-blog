@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-post/rust_syntax/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="Rust中的一些比较常用的基础语法(持续更新)" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-post/rust_syntax/" /><meta property="article:published_time" content="2023-04-25T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="Rust中的一些比较常用的基础语法(持续更新)"/>
+<meta name="twitter:description" content="Commonly Used Syntax in Rust"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-post'>old-post</a>/<a href='https://xxxdgblog.github.io/old-post/rust_syntax'>rust_syntax</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-post/" typeof="ListItem">old-post/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>Rust中的一些比较常用的基础语法(持续更新)</h1>
+<h1 id="整理一下-rust-中的一些比较常用的基础语法">整理一下 Rust 中的一些比较常用的基础语法</h1>
+<h1 id="遍历">遍历</h1>
+<h2 id="从-0-到-numslen---1">从 0 到 nums.len() - 1</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>nums.len() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="从-numlen---1-到-0">从 num.len() - 1 到 0</h2>
+<p>创建了一个 0 到 nums.len() - 1 范围然后反转 从 nums.len() - 1 开始遍历到 0</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>nums.len()).rev() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="遍历字符串">遍历字符串</h2>
+<p>直接用迭代器 不使用下标的方式</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span> <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;interface&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> s_chars <span style="color:#f92672">=</span> s.chars();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> s_chars {
+</span></span><span style="display:flex;"><span>        println!(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, i);
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>不用迭代器</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;interface&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>s.len() {
+</span></span><span style="display:flex;"><span>        println!(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, s.chars().nth(i).unwrap());
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h1 id="vec-slice-array">vec slice array</h1>
+<h2 id="将数组从某一位置分割为两个数组">将数组从某一位置分割为两个数组</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> (left, right) <span style="color:#f92672">=</span> nums.split_at_mut(mid);
+</span></span></code></pre></div><h2 id="从另一个数组中复制到另一个数组中">从另一个数组中复制到另一个数组中</h2>
+<p>nums 是 mutable</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>nums.copy_from_slice(<span style="color:#f92672">&amp;</span>merged);
+</span></span></code></pre></div><h2 id="创建指定容量大小的-vec">创建指定容量大小的 Vec</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> res <span style="color:#f92672">=</span> Vec::with_capacity(left.len() <span style="color:#f92672">+</span> right.len());
+</span></span></code></pre></div><h2 id="扩展-vec">扩展 Vec</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>res.extend_from_slice(<span style="color:#f92672">&amp;</span>left[i<span style="color:#f92672">..</span>]);
+</span></span></code></pre></div><h1 id="math">Math</h1>
+<h2 id="找到两个数中的较大者">找到两个数中的较大者</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>    <span style="color:#75715e">// 找到两个数中的较大者
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> num1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> num2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> larger <span style="color:#f92672">=</span> num1.max(num2);
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, larger);
+</span></span></code></pre></div><h1 id="snytax">Snytax</h1>
+<h2 id="match-语法">match 语法</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> std::cmp::Ordering;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> BinarySearch {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">binary_search</span>(nums: <span style="color:#66d9ef">&amp;</span>[<span style="color:#66d9ef">i32</span>], target: <span style="color:#66d9ef">i32</span>) -&gt; Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">usize</span><span style="color:#f92672">&gt;</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nums.len() <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> None;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> low <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> high <span style="color:#f92672">=</span> nums.len() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> low <span style="color:#f92672">&lt;=</span> high {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">let</span> mid <span style="color:#f92672">=</span> (high <span style="color:#f92672">-</span> low) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> low;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">match</span> target.cmp(<span style="color:#f92672">&amp;</span>nums[mid]) {
+</span></span><span style="display:flex;"><span>                Ordering::Equal <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">return</span> Some(mid),
+</span></span><span style="display:flex;"><span>                Ordering::Less <span style="color:#f92672">=&gt;</span> high <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>                Ordering::Greater <span style="color:#f92672">=&gt;</span> low <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        None
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="类似于-java-等其他语言中的三目运算符号">类似于 java 等其他语言中的三目运算符号</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>result[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> left_bound <span style="color:#f92672">==</span> <span style="color:#66d9ef">usize</span>::<span style="color:#66d9ef">MAX</span> {
+</span></span><span style="display:flex;"><span>            None
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            Some(left_bound)
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        result[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> right_bound <span style="color:#f92672">==</span> <span style="color:#66d9ef">usize</span>::<span style="color:#66d9ef">MAX</span> {
+</span></span><span style="display:flex;"><span>            None
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            Some(right_bound)
+</span></span><span style="display:flex;"><span>        };
+</span></span></code></pre></div><h2 id="定义多个变量">定义多个变量</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> (num1, num2, num3) <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>);
+</span></span></code></pre></div><p>使用 Rust 语言中的元组（tuple）来同时定义三个变量：num1、num2 和 num3，并分别给它们赋值为 1、2 和 3。元组是一种可以存储多个不同类型数据的有序集合，在 Rust 中用小括号 () 表示，其中各个元素之间以逗号 , 分隔。</p>
+<p>因此，这行代码定义了一个包含三个元素的元组，并对其进行了解构，将其中的每个元素依次赋值给 num1、num2 和 num3 三个变量。</p>
+<h2 id="使用下划线开头作为变量名">使用下划线开头作为变量名</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> hello <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;hello&#34;</span>);
+</span></span></code></pre></div><p>如果我们使用上面的方式定义变量的话，如果我们在之后并没有使用该变量，我们的代码虽然会编译通过，但是 rust 编译器会提示我们该变量未使用。为此我们可以使用一下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> _hello <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;hello&#34;</span>);
+</span></span></code></pre></div>
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

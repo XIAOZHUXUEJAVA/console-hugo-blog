@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>review on littlepig</title>
+    <link>https://xxxdgblog.github.io/tags/review/</link>
+    <description>Recent content in review on littlepig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些必知必会的算法(1)</title>
+      <link>https://xxxdgblog.github.io/old-post/simple_algorithms/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/simple_algorithms/</guid>
+      <description>Simple Algorithms</description>
+    </item>
+    
+    <item>
+      <title>反转链表II</title>
+      <link>https://xxxdgblog.github.io/old-post/reverse_linked_lists_ii/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/reverse_linked_lists_ii/</guid>
+      <description>Reverse Linked Lists II</description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://xxxdgblog.github.io/old-post/test/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/test/</guid>
+      <description>TEST</description>
+    </item>
+    
+    <item>
+      <title>相交链表-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_intersection_node/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_intersection_node/</guid>
+      <description>Get Intersection Node</description>
+    </item>
+    
+    <item>
+      <title>电话号码字母组合</title>
+      <link>https://xxxdgblog.github.io/old-post/letter_combinations/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/letter_combinations/</guid>
+      <description>Letter Combinations</description>
+    </item>
+    
+    <item>
+      <title>组合总和3-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_combination_sum3/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_combination_sum3/</guid>
+      <description>Review Combination Sum 3</description>
+    </item>
+    
+    <item>
+      <title>合并两个排序链表-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_merge_two_sorted_lists/</link>
+      <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_merge_two_sorted_lists/</guid>
+      <description>Review Merge Two Sorted Lists</description>
+    </item>
+    
+    <item>
+      <title>组合-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_combinations/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_combinations/</guid>
+      <description>Review Combination</description>
+    </item>
+    
+    <item>
+      <title>删除链表中的倒数第N个结点-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_remove_nth_node_from_end/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_remove_nth_node_from_end/</guid>
+      <description>Remove Nth Node From End</description>
+    </item>
+    
+    <item>
+      <title>删除数组中的指定元素-----复习</title>
+      <link>https://xxxdgblog.github.io/old-post/review_remove_element_from_array/</link>
+      <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/review_remove_element_from_array/</guid>
+      <description>Remove Element From Array</description>
+    </item>
+    
+  </channel>
+</rss>

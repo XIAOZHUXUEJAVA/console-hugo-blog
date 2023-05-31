@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-post/search_in_bst/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="二叉搜索树中搜索元素" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-post/search_in_bst/" /><meta property="article:published_time" content="2022-12-02T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="二叉搜索树中搜索元素"/>
+<meta name="twitter:description" content="Search In BST"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-post'>old-post</a>/<a href='https://xxxdgblog.github.io/old-post/search_in_bst'>search_in_bst</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-post/" typeof="ListItem">old-post/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>二叉搜索树中搜索元素</h1>
+<h1 id="search-in-bst">Search In BST</h1>
+<h2 id="java">java</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.zhu.algorithms.leetcode.tree<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.zhu.algorithms.leetcode.base.TreeNode<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @description: SearchInBST
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date: 2022/11/29 23:18
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @version: 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SearchInBST</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> preorder <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#ae81ff">4</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> inorder <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span>        TreeNode root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BuildBinaryTree<span style="color:#f92672">().</span><span style="color:#a6e22e">buildTreeByPreIn</span><span style="color:#f92672">(</span>preorder<span style="color:#f92672">,</span> inorder<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        SearchInBST test <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SearchInBST<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        TreeNode treeNode <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span><span style="color:#a6e22e">searchBST</span><span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>treeNode<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">searchBST</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>target <span style="color:#f92672">&lt;</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> searchBST<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> target<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>target <span style="color:#f92672">&gt;</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> searchBST<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> target<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> root<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="go">go</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">tree</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">searchBST</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">target</span> <span style="color:#66d9ef">int</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">target</span> &lt; <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">searchBST</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">target</span> &gt; <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">searchBST</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">root</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="c">c++</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Created by xiaoz on 2022/12/1.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;build_tree.cpp&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>using namespace std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class SearchInBST {
+</span></span><span style="display:flex;"><span>public:
+</span></span><span style="display:flex;"><span>    TreeNode<span style="color:#f92672">*</span> <span style="color:#a6e22e">searchBST</span>(TreeNode<span style="color:#f92672">*</span> root, <span style="color:#66d9ef">int</span> target) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (root <span style="color:#f92672">==</span> nullptr) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> nullptr;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (root<span style="color:#f92672">-&gt;</span>val <span style="color:#f92672">&gt;</span> target) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">searchBST</span>(root<span style="color:#f92672">-&gt;</span>left, target);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (root<span style="color:#f92672">-&gt;</span>val <span style="color:#f92672">&lt;</span> target) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">searchBST</span>(root<span style="color:#f92672">-&gt;</span>right, target);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> root;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    BuildTree build;
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> preorder <span style="color:#f92672">=</span> {<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>};
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> inorder <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>};
+</span></span><span style="display:flex;"><span>    TreeNode<span style="color:#f92672">*</span> root <span style="color:#f92672">=</span> build.<span style="color:#a6e22e">buildTreeFromPreAndIn</span>(preorder, inorder);
+</span></span><span style="display:flex;"><span>    SearchInBST test;
+</span></span><span style="display:flex;"><span>    TreeNode<span style="color:#f92672">*</span> searchNode <span style="color:#f92672">=</span> test.<span style="color:#a6e22e">searchBST</span>(root, <span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span>searchNode<span style="color:#f92672">-&gt;</span>val<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="python">python</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Optional
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> data_algo.algo.tree.TreeNode <span style="color:#f92672">import</span> TreeNode
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> data_algo.algo.tree.build_tree <span style="color:#f92672">import</span> BuildTree
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SearchInBST</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">searchBST</span>(self, root: Optional[TreeNode], target: int) <span style="color:#f92672">-&gt;</span> Optional[TreeNode]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> root <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> target <span style="color:#f92672">&lt;</span> root<span style="color:#f92672">.</span>val:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>searchBST(root<span style="color:#f92672">.</span>left, target)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> target <span style="color:#f92672">&gt;</span> root<span style="color:#f92672">.</span>val:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>searchBST(root<span style="color:#f92672">.</span>right, target)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> root
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    preorder <span style="color:#f92672">=</span> (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span>    inorder <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span>    build <span style="color:#f92672">=</span> BuildTree()
+</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">=</span> build<span style="color:#f92672">.</span>buildTree(preorder, inorder)
+</span></span><span style="display:flex;"><span>    test <span style="color:#f92672">=</span> SearchInBST()
+</span></span><span style="display:flex;"><span>    searchNode <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span>searchBST(root, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    print(searchNode<span style="color:#f92672">.</span>val)
+</span></span></code></pre></div>
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on littlepig</title>
+    <link>https://xxxdgblog.github.io/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on littlepig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu20.04 Install MySQL8  ERROR 2002 (HY000)</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_install_mysql/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_install_mysql/</guid>
+      <description>Docker Ubuntu Container SetUp</description>
+    </item>
+    
+    <item>
+      <title>使用Shell脚本文件配置Docker Ubuntu Container</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_shell/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_shell/</guid>
+      <description>Docker Ubuntu Container SetUp Use Shell</description>
+    </item>
+    
+    <item>
+      <title>docker 完善一个Ubuntu容器</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_setup/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_setup/</guid>
+      <description>Docker Ubuntu Container SetUp</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</guid>
+      <description>Configure environment variables and zsh on ubuntu linux</description>
+    </item>
+    
+    <item>
+      <title>docker 容器和镜像的备份</title>
+      <link>https://xxxdgblog.github.io/old-post/dockerpush/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/dockerpush/</guid>
+      <description>To save and push docker container</description>
+    </item>
+    
+    <item>
+      <title>docker 运行一个Ubuntu 容器 无法启动的问题</title>
+      <link>https://xxxdgblog.github.io/old-post/ubuntu_container_start_error/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/old-post/ubuntu_container_start_error/</guid>
+      <description>To solve the problem that ubuntu_container_start_error</description>
+    </item>
+    
+  </channel>
+</rss>

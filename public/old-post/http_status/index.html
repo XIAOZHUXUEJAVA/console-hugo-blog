@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-post/http_status/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="每日小知识点(三) - HTTP 状态码" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-post/http_status/" /><meta property="article:published_time" content="2023-03-23T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="每日小知识点(三) - HTTP 状态码"/>
+<meta name="twitter:description" content="Daily Little Knowledge Points"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-post'>old-post</a>/<a href='https://xxxdgblog.github.io/old-post/http_status'>http_status</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-post/" typeof="ListItem">old-post/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>每日小知识点(三) - HTTP 状态码</h1>
+<h1 id="每日小知识点三---http-状态码">每日小知识点(三) - HTTP 状态码</h1>
+<p>HTTP 状态码是用来表示 HTTP 请求的响应状态的数字代码。</p>
+<h2 id="2xx">2xx</h2>
+<ul>
+<li><strong>200 OK</strong> ：请求成功，服务器成功地返回了请求地数据。比如 GET 请求指定用户信息</li>
+<li><strong>201 Created</strong> ：请求成功并且服务器创建了一个新的资源。比如我们通过 POST 请求创建一个新的用户。</li>
+<li><strong>202 Accepted</strong> ：服务端已经接收到了请求，但是还未处理。</li>
+<li><strong>204 No Content</strong> ： 服务端已经成功处理了请求，但是响应不含有任何实体内容。</li>
+</ul>
+<h2 id="3xx">3xx</h2>
+<ul>
+<li><strong>301 Moved Permanently</strong> ： 资源被永久重定向了。比如网站的网址更换了。</li>
+<li><strong>302 Found</strong> ：资源被临时重定向了。比如你的网站的某些资源被暂时转移到另外一个网址。</li>
+</ul>
+<h2 id="4xx">4xx</h2>
+<ul>
+<li><strong>400 Bad Request</strong> ： 服务器无法理解请求地语法。通常是由于请求的参数或数据格式错误导致的</li>
+<li><strong>401 Unauthorized</strong> ： 请求未经过授权认证，比如我们的管理员登录和普通用户登录时</li>
+<li><strong>403 Forbidden</strong> ：直接拒绝 HTTP 请求，不处理。一般用来针对非法请求。</li>
+<li><strong>404 Not Found</strong> ： 服务器无法找到请求的资源，这时候我们就应该注意自己的 url 路径相关是否正确。</li>
+<li><strong>409 Conflict</strong> ： 表示请求的资源与服务端当前的状态存在冲突，请求无法被处理。</li>
+</ul>
+<h2 id="5xx">5xx</h2>
+<ul>
+<li><strong>500 Internal Server Error</strong> ： 一般情况下就是你的服务端代码出现了问题。</li>
+<li><strong>502 Bad Gateway</strong> ：我们的网关将请求转发到服务端，但是服务端返回的却是一个错误的响应。也就是说我们服务器作为网关或者代理的时候，从上游服务器接收到的响应无效。</li>
+<li><strong>503 Service Unavailable</strong> : 服务器暂时无法处理请求。通常是由于过多的请求导致服务器负载过高或正在维护。</li>
+</ul>
+<h2 id="一些处理状态码和异常的小技巧">一些处理状态码和异常的小技巧</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * 响应枚举，用于异常的信息设置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author xiaozhu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date 2022年10月03日 23:40                          $
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> AppHttpCodeEnum <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    SUCCESS<span style="color:#f92672">(</span><span style="color:#ae81ff">200</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;操作成功&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 登录
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    NEED_LOGIN<span style="color:#f92672">(</span><span style="color:#ae81ff">401</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;需要登录后操作&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    NO_OPERATOR_AUTH<span style="color:#f92672">(</span><span style="color:#ae81ff">403</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;无权限操作&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    SYSTEM_ERROR<span style="color:#f92672">(</span><span style="color:#ae81ff">500</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;出现错误&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    USERNAME_EXIST<span style="color:#f92672">(</span><span style="color:#ae81ff">501</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;用户名已存在&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    PHONENUMBER_EXIST<span style="color:#f92672">(</span><span style="color:#ae81ff">502</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;手机号已存在&#34;</span><span style="color:#f92672">),</span> EMAIL_EXIST<span style="color:#f92672">(</span><span style="color:#ae81ff">503</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;邮箱已存在&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    REQUIRE_USERNAME<span style="color:#f92672">(</span><span style="color:#ae81ff">504</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;必需填写用户名&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    NO_USER_ERROR<span style="color:#f92672">(</span><span style="color:#ae81ff">519</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;用户不存在&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    CONTENT_NOT_NULL<span style="color:#f92672">(</span><span style="color:#ae81ff">519</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;评论不能为空&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    PARAMETER_ERROR<span style="color:#f92672">(</span><span style="color:#ae81ff">1001</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;请求参数有误!&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    LOGIN_ERROR<span style="color:#f92672">(</span><span style="color:#ae81ff">505</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;用户名或密码错误&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> code<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    String msg<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    AppHttpCodeEnum<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> code<span style="color:#f92672">,</span> String errorMessage<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">=</span> code<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span> <span style="color:#f92672">=</span> errorMessage<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> code<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getMsg</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> msg<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * 全局异常
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author xiaozhu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date 2022年10月03日 23:40                          $
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SystemException</span> <span style="color:#66d9ef">extends</span> RuntimeException<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> code<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String msg<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> code<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getMsg</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> msg<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">SystemException</span><span style="color:#f92672">(</span>AppHttpCodeEnum httpCodeEnum<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>httpCodeEnum<span style="color:#f92672">.</span><span style="color:#a6e22e">getMsg</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">code</span> <span style="color:#f92672">=</span> httpCodeEnum<span style="color:#f92672">.</span><span style="color:#a6e22e">getCode</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">msg</span> <span style="color:#f92672">=</span> httpCodeEnum<span style="color:#f92672">.</span><span style="color:#a6e22e">getMsg</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>枚举类<code>AppHttpCodeEnum</code>中定义了一些常用的 HTTP 返回码，如成功返回码<code>SUCCESS</code>、需要登录返回码<code>NEED_LOGIN</code>等。每个返回码都有一个对应的状态码和错误信息，通过调用<code>getCode()</code>和<code>getMsg()</code>方法可以获取相应的状态码和错误信息。</p>
+<p>自定义异常类<code>SystemException</code>继承了 Java 的 RuntimeException 类，用于在程序运行过程中抛出异常。当抛出这个异常时，会调用<code>AppHttpCodeEnum</code>中定义的错误信息，并返回对应的状态码。同时，这个异常类还提供了获取状态码和错误信息的方法<code>getCode()</code>和<code>getMsg()</code>，方便在程序中获取异常的信息。</p>
+<p>这样设计的好处在于，<strong>当程序发生异常时，可以直接抛出<code>SystemException</code>异常，通过捕获异常获取到对应的状态码和错误信息，从而快速定位和解决问题。同时，使用枚举类定义 HTTP 返回码，可以方便地管理和扩展状态码。</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * 全局捕获异常
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author xiaozhu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date 2022年10月03日 23:40                          $
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RestControllerAdvice</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GlobalExceptionHandler</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@ExceptionHandler</span><span style="color:#f92672">(</span>SystemException<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseResult <span style="color:#a6e22e">systemExceptionHandler</span><span style="color:#f92672">(</span>SystemException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//打印异常信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        log<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;出现了异常！ : {}&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//从异常对象中获取提示信息封装返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> ResponseResult<span style="color:#f92672">.</span><span style="color:#a6e22e">errorResult</span><span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getCode</span><span style="color:#f92672">(),</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getMsg</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@ExceptionHandler</span><span style="color:#f92672">(</span>Exception<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseResult <span style="color:#a6e22e">exceptionHandler</span><span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//打印异常信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        log<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;出现了异常！ : {}&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//从异常对象中获取提示信息封装返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> ResponseResult<span style="color:#f92672">.</span><span style="color:#a6e22e">errorResult</span><span style="color:#f92672">(</span>AppHttpCodeEnum<span style="color:#f92672">.</span><span style="color:#a6e22e">SYSTEM_ERROR</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getCode</span><span style="color:#f92672">(),</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@ResponseStatus</span><span style="color:#f92672">(</span>HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">BAD_REQUEST</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@ExceptionHandler</span><span style="color:#f92672">(</span>MethodArgumentNotValidException<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseResult <span style="color:#a6e22e">parameterExceptionHandler</span><span style="color:#f92672">(</span>MethodArgumentNotValidException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        log<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;参数出现了异常！ : {}&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获取异常信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        BindingResult exceptions <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getBindingResult</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 判断异常中是否有错误信息，如果存在就使用异常中的消息，否则使用默认消息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>exceptions<span style="color:#f92672">.</span><span style="color:#a6e22e">hasErrors</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            List<span style="color:#f92672">&lt;</span>ObjectError<span style="color:#f92672">&gt;</span> errors <span style="color:#f92672">=</span> exceptions<span style="color:#f92672">.</span><span style="color:#a6e22e">getAllErrors</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>errors<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 这里列出了全部错误参数，按正常逻辑，只需要第一条错误即可
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                FieldError fieldError <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>FieldError<span style="color:#f92672">)</span> errors<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> ResponseResult<span style="color:#f92672">.</span><span style="color:#a6e22e">errorResult</span><span style="color:#f92672">(</span>AppHttpCodeEnum<span style="color:#f92672">.</span><span style="color:#a6e22e">PARAMETER_ERROR</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getCode</span><span style="color:#f92672">(),</span> fieldError<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultMessage</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ResponseResult<span style="color:#f92672">.</span><span style="color:#a6e22e">okResult</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@PostMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/add&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span>  ResponseResult <span style="color:#a6e22e">saveUser</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@RequestBody</span> <span style="color:#a6e22e">@Valid</span> User user<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        userService<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>user<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ResponseResult<span style="color:#f92672">.</span><span style="color:#a6e22e">okResult</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>上述代码是一个全局异常处理器，用于捕获系统运行时抛出的异常，并返回统一的错误信息。这个异常处理器使用了 Spring 框架的@RestControllerAdvice 注解，表示这是一个全局的异常处理器，会对整个系统中的异常进行统一处理。同时，这个类还使用了 Lombok 的@Slf4j 注解，方便进行日志打印。</p>
+<p>异常处理器中定义了三个异常处理方法，分别处理 SystemException、Exception 和 MethodArgumentNotValidException 三种异常。</p>
+<ul>
+<li>
+<p>对于 SystemException，直接从异常对象中获取状态码和错误信息并返回；</p>
+</li>
+<li>
+<p>对于 Exception，返回系统错误的状态码和异常信息；</p>
+</li>
+<li>
+<p>对于 MethodArgumentNotValidException，返回参数校验失败的状态码和异常信息。</p>
+</li>
+</ul>
+<p>其中，@ExceptionHandler 注解用于指定处理的异常类型，而@ResponseStatus 注解用于设置 HTTP 响应状态码。</p>
+<p>在 UserController 中，@Valid 注解用于开启参数校验功能，表示对请求参数进行校验。如果请求参数不符合要求，则会抛出 MethodArgumentNotValidException 异常。注意到在 GlobalExceptionHandler 中已经定义了对这种异常的处理方法，所以这个异常不会被@Valid 注解捕获，而是会被全局异常处理器捕获并处理。</p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

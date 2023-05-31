@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-post/ubuntu_shell/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="使用Shell脚本文件配置Docker Ubuntu Container" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-post/ubuntu_shell/" /><meta property="article:published_time" content="2022-12-21T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="使用Shell脚本文件配置Docker Ubuntu Container"/>
+<meta name="twitter:description" content="Docker Ubuntu Container SetUp Use Shell"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-post'>old-post</a>/<a href='https://xxxdgblog.github.io/old-post/ubuntu_shell'>ubuntu_shell</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-post/" typeof="ListItem">old-post/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>使用Shell脚本文件配置Docker Ubuntu Container</h1>
+<h2 id="3-shell">3. shell</h2>
+<h3 id="31-准备工作">3.1 准备工作</h3>
+<p>新建一个 docker 容器</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>dokcer run -itd --name ubuntu-sh ubuntu
+</span></span></code></pre></div><p>进入容器</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker exec --it ubuntu-sh /bin/bash
+</span></span></code></pre></div><p>更新 apt</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>apt update
+</span></span></code></pre></div><p>进入根</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd root
+</span></span></code></pre></div><p>安装 sudo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>apt install sudo
+</span></span></code></pre></div><p>安装 vim</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt install vim -y
+</span></span></code></pre></div><h3 id="32-zsh">3.2 zsh</h3>
+<p>新建脚本文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim .zsh.sh
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================update apt====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt update -y <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================changing shell to zsh====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt install zsh git curl wget -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chsh -s <span style="color:#66d9ef">$(</span>which zsh<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install Oh-My-Zsh</span>
+</span></span><span style="display:flex;"><span>sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>zsh
+</span></span></code></pre></div><p>保存后，赋予权限</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo chmod u+x .zsh.sh
+</span></span></code></pre></div><p>运行脚本</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./.zsh.sh
+</span></span></code></pre></div><h3 id="33-环境">3.3 环境</h3>
+<h4 id="331-安装">3.3.1 安装</h4>
+<p>新建一个.java_go_install.sh 文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># install java8</span>
+</span></span><span style="display:flex;"><span>sudo apt install openjdk-8-jdk -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># install go</span>
+</span></span><span style="display:flex;"><span>sudo wget https://golang.google.cn/dl/go1.18.5.linux-amd64.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># unzip to /usr/local</span>
+</span></span><span style="display:flex;"><span>sudo tar xfz go1.18.5.linux-amd64.tar.gz -C /usr/local
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># delete zip</span>
+</span></span><span style="display:flex;"><span>rm -rf go1.18.5.linux-amd64.tar.gz
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 赋予权限</span>
+</span></span><span style="display:flex;"><span>sudo chmod u+x .java_go_install.sh
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 运行</span>
+</span></span><span style="display:flex;"><span>./.java_go_install.sh
+</span></span></code></pre></div><h4 id="332-配置变量">3.3.2 配置变量</h4>
+<p>新建一个 env_java_go.sh 脚本文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim .java_go_env.sh
+</span></span></code></pre></div><p>输入环境变量</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>export JAVA_HOME<span style="color:#f92672">=</span>/usr/lib/jvm/java-8-openjdk-amd64
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span>$JAVA_HOME/bin:$PATH
+</span></span><span style="display:flex;"><span>export CLASSPATH<span style="color:#f92672">=</span>.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+</span></span><span style="display:flex;"><span>export JAVA_TOOL_OPTIONS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-Dfile.encoding=UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>export GOROOT<span style="color:#f92672">=</span>/usr/local/go
+</span></span><span style="display:flex;"><span>export GOPATH<span style="color:#f92672">=</span>$HOME/gowork
+</span></span><span style="display:flex;"><span>export GOBIN<span style="color:#f92672">=</span>$GOPATH/bin
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span>$GOPATH:$GOBIN:$GOROOT/bin:$PATH
+</span></span></code></pre></div><p>在~/.zshrc 文件中输入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source ~/.java_go_env.sh
+</span></span></code></pre></div><p>然后使用命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source ~/.zshrc
+</span></span></code></pre></div><p>重启</p>
+<p>补充：</p>
+<p><code>export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code> 和 <code>export PATH=$JAVA_HOME/bin:$PATH</code>会不会出现冲突？</p>
+<p>不会。<code>export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code> 和 <code>export PATH=$JAVA_HOME/bin:$PATH</code> 这两条命令均在设置环境变量 <code>PATH</code> 的值。</p>
+<p>在这两条命令中，第一条命令中的 <code>$GOPATH:$GOBIN:$GOROOT/bin</code> 是将 Go 的工作区路径、可执行文件的路径和 Go 的安装路径添加到 <code>PATH</code> 中。第二条命令中的 <code>$JAVA_HOME/bin</code> 则是将 Java 的安装路径添加到 <code>PATH</code> 中。</p>
+<p>两条命令中都有 <code>:$PATH</code>，这意味着它们会将原来 <code>PATH</code> 中的路径保留下来。因此，这两条命令不会冲突，而是会将 Go 和 Java 的路径都添加到 <code>PATH</code> 中。</p>
+<h4 id="333-整合一下所有的sh-文件">3.3.3 整合一下所有的.sh 文件</h4>
+<p>我们只需要运行一下这三个脚本文件，就可以初步的使用这个容器了！</p>
+<p>.zsh.sh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================update apt====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt update -y <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================changing shell to zsh====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt install zsh git curl wget -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chsh -s <span style="color:#66d9ef">$(</span>which zsh<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install Oh-My-Zsh</span>
+</span></span><span style="display:flex;"><span>sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>zsh
+</span></span></code></pre></div><p>.lang.sh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================update apt====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt update -y <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================install go====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo wget https://golang.google.cn/dl/go1.18.5.linux-amd64.tar.gz
+</span></span><span style="display:flex;"><span>sudo tar xfz go1.18.5.linux-amd64.tar.gz -C /usr/local
+</span></span><span style="display:flex;"><span>rm -rf go1.18.5.linux-amd64.tar.gz
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export GOROOT=/usr/local/go&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export GOPATH=\$HOME/gowork&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export GOBIN=\$GOPATH/bin&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export PATH=\$GOPATH:\$GOBIN:\$GOROOT/bin:\$PATH&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================install java8====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt install openjdk-8-jdk -y
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export PATH=\$JAVA_HOME/bin:\$PATH&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export JAVA_TOOL_OPTIONS=\&#34;-Dfile.encoding=UTF-8\&#34;&#34;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================install c/c++====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt install build-essential gdb camke -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================install python3====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt install python3 -y
+</span></span><span style="display:flex;"><span>sudo apt install python3-venv -y
+</span></span><span style="display:flex;"><span>sudo apt install python3-setuptools -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================install nodejs====================\n&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># install npm</span>
+</span></span><span style="display:flex;"><span>sudo apt install npm -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># switch to taobao mirror source</span>
+</span></span><span style="display:flex;"><span>sudo npm config set registry https://registry.npmmirror.com/
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># install nodejs</span>
+</span></span><span style="display:flex;"><span>sudo apt install nodejs -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># install nodejs manangement tools</span>
+</span></span><span style="display:flex;"><span>sudo npm install n -g -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># update nodejs to stable version</span>
+</span></span><span style="display:flex;"><span>sudo n stable
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># install to long dont read</span>
+</span></span><span style="display:flex;"><span>sudo npm install -g tldr -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;====================install redis====================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo apt-get install -y redis-server
+</span></span></code></pre></div><p>.tools.sh 后续有什么需要的工具我们在这个脚本文件中添加，添加一些我们需要使用的工具或者软件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># install neovim</span>
+</span></span><span style="display:flex;"><span>sudo apt install neovim -y
+</span></span></code></pre></div><p>更多请浏览：
+github repository ： <a href="https://github.com/XIAOZHUXUEJAVA/dotfiles/tree/master/docker_ubuntu">https://github.com/XIAOZHUXUEJAVA/dotfiles/tree/master/docker_ubuntu</a></p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

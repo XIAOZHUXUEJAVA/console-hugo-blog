@@ -5,12 +5,15 @@ title = "About"
 
 A Simple Blog With Hugo
 
-* name: xiaozhu
+* Name: xiaozhu
 
-* hobby: music
+* Hobby: Music
 
-* other sites: 
+* Other Sites: 
 
-https://xxxdgblog.netlify.app/blog
+  - https://xxxdgblog.netlify.app/blog
 
-https://chat-xiaozhu.netlify.app/zh
+  - https://chat-xiaozhu.netlify.app/zh
+* GitHub: https://github.com/XIAOZHUXUEJAVA
+
+* Mail: im.zhu.dong.peng@gmail.com

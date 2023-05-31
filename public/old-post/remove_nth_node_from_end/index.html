@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-post/remove_nth_node_from_end/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="删除链表中的倒数第N个结点" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-post/remove_nth_node_from_end/" /><meta property="article:published_time" content="2022-12-17T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="删除链表中的倒数第N个结点"/>
+<meta name="twitter:description" content="删除链表中的倒数第 N 个结点 java public ListNode removeNthFromEnd(ListNode head, int n) { ListNode dummy = new ListNode(-1); dummy.next = head; ListNode node = findNthFromEnd(dummy, n &#43; 1); node.next = node.next.next; return dummy.next; } /* * @Title: findNthFromEnd * @Description: 找到我们要删除的结点 * @Author: zdp * @DateTime: 2022/12/16 22:57 * @param head * @param n * @return com.zhu.algorithms.leetcode.base.ListNode * @throws */ public ListNode findNthFromEnd(ListNode head, int n) { ListNode p = head; // 1 2 3 4 5 // 我们要找到倒数第2个元素的话，需要走3步，走5步到达null, 也就是说我们走5 - 2 步 // 首先走2步 for (int i = 0; i &lt; n; i&#43;&#43;) { p = p."/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-post'>old-post</a>/<a href='https://xxxdgblog.github.io/old-post/remove_nth_node_from_end'>remove_nth_node_from_end</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-post/" typeof="ListItem">old-post/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>删除链表中的倒数第N个结点</h1>
+<h1 id="删除链表中的倒数第-n-个结点">删除链表中的倒数第 N 个结点</h1>
+<h2 id="java">java</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">removeNthFromEnd</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        ListNode dummy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode<span style="color:#f92672">(-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        dummy<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        ListNode node <span style="color:#f92672">=</span> findNthFromEnd<span style="color:#f92672">(</span>dummy<span style="color:#f92672">,</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @Title: findNthFromEnd
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @Description: 找到我们要删除的结点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @Author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @DateTime: 2022/12/16 22:57
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param n
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @return com.zhu.algorithms.leetcode.base.ListNode
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @throws
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">findNthFromEnd</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        ListNode p <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1 2 3 4 5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 我们要找到倒数第2个元素的话，需要走3步，走5步到达null, 也就是说我们走5 - 2 步
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 首先走2步
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            p <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 然后重新走 p 走到null 的时候,需要走3步，正好就是我们需要的。我们新的指针p1也就走到我们所求的地方
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ListNode p1 <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>p <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            p <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            p1 <span style="color:#f92672">=</span> p1<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> p1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="go">go</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">removeNthFromEnd</span>(<span style="color:#a6e22e">head</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">ListNode</span>, <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">ListNode</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">dummy</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">ListNode</span>{<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">head</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">node</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findNthFromEnd</span>(<span style="color:#a6e22e">dummy</span>, <span style="color:#a6e22e">n</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Next</span> = <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Next</span>.<span style="color:#a6e22e">Next</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dummy</span>.<span style="color:#a6e22e">Next</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findNthFromEnd</span>(<span style="color:#a6e22e">head</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">ListNode</span>, <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">ListNode</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">p</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">head</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">p</span> = <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Next</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">p1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">head</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">p1</span> = <span style="color:#a6e22e">p1</span>.<span style="color:#a6e22e">Next</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">p</span> = <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Next</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">p1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="c">c++</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>ListNode<span style="color:#f92672">*</span> <span style="color:#a6e22e">removeNthFromEnd</span>(ListNode<span style="color:#f92672">*</span> head, <span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>        ListNode<span style="color:#f92672">*</span> dummy <span style="color:#f92672">=</span> new <span style="color:#a6e22e">ListNode</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        dummy<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>        ListNode<span style="color:#f92672">*</span> node <span style="color:#f92672">=</span> <span style="color:#a6e22e">findFromEnd</span>(dummy, n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        node<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> node<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    ListNode<span style="color:#f92672">*</span> <span style="color:#a6e22e">findFromEnd</span>(ListNode<span style="color:#f92672">*</span> head, <span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>        ListNode<span style="color:#f92672">*</span> p <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            p <span style="color:#f92672">=</span> p<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        ListNode<span style="color:#f92672">*</span> p1 <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (p) {
+</span></span><span style="display:flex;"><span>            p <span style="color:#f92672">=</span> p<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>            p1<span style="color:#f92672">=</span> p1<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> p1;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div>
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>
