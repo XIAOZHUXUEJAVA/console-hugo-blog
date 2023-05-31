@@ -24,6 +24,6 @@ languageCode = "en-us"
   url = "photos/"
 
   [[params.navlinks]]
-  name = "old-post/"
-  url = "old-post/"
+  name = "old-posts/"
+  url = "old-posts/"
 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-posts/github_typora_picgo/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="github&#43;typora&#43;picgo" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-posts/github_typora_picgo/" /><meta property="article:published_time" content="2022-03-08T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="github&#43;typora&#43;picgo"/>
+<meta name="twitter:description" content="To Build a personal picture bed"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-posts'>old-posts</a>/<a href='https://xxxdgblog.github.io/old-posts/github_typora_picgo'>github_typora_picgo</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-posts/" typeof="ListItem">old-posts/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>github&#43;typora&#43;picgo</h1>
+<h1 id="github--typora--picgo-搭建个人图床">Github + Typora + PicGo 搭建个人图床</h1>
+<h2 id="1-github">1. Github</h2>
+<p>我们把讲述Github放在教程的第一位的原因是，如果连GitHub都不能用的话，此教程直接作废。</p>
+<h3 id="11-github相关">1.1 github相关</h3>
+<p>首先我们需要一个GitHub账号，但是github.com有时候不能访问，需要科学上网，这里推荐一个开发者的边车工具&mdash;&mdash;dev-sidercar，这里贴出了具体网址，如果读者发现某一天你的github浏览还算流畅，就趁这个流畅的机会赶紧下载这个工具，当然这里也不是广告，因为这个工具确实好用。实在不行，可网盘自取，或者私信</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202024741.png" alt="image-20221020202434700"></p>
+<pre tabindex="0"><code>链接：https://pan.baidu.com/s/1-C0cjbPqa5734OOGii0n5Q 
+提取码：0307 
+</code></pre><h3 id="12-新建一个github图片仓库">1.2 新建一个github图片仓库</h3>
+<p>这一步和创建普通的代码仓库差不多</p>
+<ol>
+<li>点击右上角 &ldquo;+&quot;，New repository</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202031772.png" alt="image-20221020203100735"></p>
+<ol start="2">
+<li>填写相应信息</li>
+</ol>
+<ul>
+<li>Repository name 自己设置一个仓库名称</li>
+<li>设置为public任何人可以访问</li>
+<li>Add a README file</li>
+<li>Create resposity</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202039765.png" alt="image-20221020203909690"></p>
+<ol start="3">
+<li>创建token令牌</li>
+</ol>
+<ul>
+<li>点击右上角你的头像，点击Settings</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202043780.png" alt=""></p>
+<ul>
+<li>找到Developer settings</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202048522.png" alt="image-20221020204820483"></p>
+<ul>
+<li>点击Tokens(classic)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202050592.png" alt="image-20221020205019557"></p>
+<ul>
+<li>点击Generate new token 创建即可</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202053044.png" alt="image-20221020205347007"></p>
+<ul>
+<li>填写token相关信息</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202057432.png" alt="image-20221020205716360"></p>
+<ul>
+<li>
+<p>点击Generate token</p>
+</li>
+<li>
+<p>得到token</p>
+<p>注意，我们的token只能看到一次，因此我们需要备份起来，以防丢失</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202101251.png" alt="image-20221020210109212"></p>
+<h2 id="2-picgo">2. PicGo</h2>
+<ul>
+<li>
+<p>下载安装</p>
+<p>这里给出下载链接</p>
+</li>
+</ul>
+<pre tabindex="0"><code>https://github.com/Molunerfinn/picgo/releases
+</code></pre><p>较慢的话，也可以在步骤1中给到的百度网盘中下载。</p>
+<ul>
+<li>
+<p>配置</p>
+<p>找到<strong>图床设置</strong>， <strong>GitHub设置</strong></p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202118027.png" alt="image-20221020211804972"></p>
+<ul>
+<li>仓库名： for example ： xiaoduoge/Bed   其中xiaoduoge为我们github用户名，Bed为我们刚才新建的仓库</li>
+<li>分支名：一般为main，不确定的话可以查看我们刚才新建的仓库的</li>
+</ul>
+<p>​    <img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202121727.png" alt="image-20221020212150683"></p>
+<ul>
+<li>
+<p>token：为我们刚才创建的token值，这里一定要注意，不要复制多余的空格之类的</p>
+</li>
+<li>
+<p>存储路径：这个/img在我们上传图片成功的时候会自动创建这个文件夹，无关紧要</p>
+</li>
+<li>
+<p>自定义域名：本人在一开始直接使用的是<code>https://raw.githubusercontent.com/用户名/仓库名/main</code>，如果可用的话，我们就可以直接只用这个域名，否则我们还可以使用免费的CDN加速一下：<code>https://cdn.jsdelivr.net/gh/用户名/仓库名</code></p>
+</li>
+<li>
+<p>确定，设为默认图床</p>
+</li>
+<li>
+<p>转到PicGo设置中，设置时间戳重名打开</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202131783.png" alt="image-20221020213125728"></p>
+<ul>
+<li>server设置</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202133906.png" alt="image-20221020213300853"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202132545.png" alt="image-20221020213229506"></p>
+<p>其中监听端口一定要与Typora中的一致，待会阐述</p>
+<h2 id="3-typora">3. Typora</h2>
+<p>很可惜，这个软件收费，但我相信你手里有，就算没有，我们可以去百度、Google、微信公众号等搜索破解版，当然，有能力的伙伴们还是支持正版！！！</p>
+<p>打开偏好设置</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202138928.png" alt="image-20221020213848884"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202139681.png" alt="image-20221020213939612"></p>
+<p>设置如上</p>
+<ul>
+<li>
+<p>选择上传图片</p>
+</li>
+<li>
+<p>上传服务：PicGo（app）</p>
+</li>
+<li>
+<p>PigGo路径为你所安装的路径</p>
+</li>
+<li>
+<p>验证图片上传选项</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202143966.png" alt="image-20221020214338917"></p>
+<h2 id="4-后续">4. 后续</h2>
+<p>个人只遇到了401的错误，大概率是你的token复制错误了，可以确认无误后重新复制一下，或者重新生成一个token。如下</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210202147152.png" alt="image-20221020214715101"></p>
+<p>参考文章  <a href="https://cloud.tencent.com/developer/article/1651601">使用Picgo+GitHub+ jsDelivr搭建CDN加速免费图床 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+<p>如有错误和冒犯，欢迎指正！</p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

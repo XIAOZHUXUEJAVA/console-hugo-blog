@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-posts/ubuntu_zsh_config/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-posts/ubuntu_zsh_config/" /><meta property="article:published_time" content="2022-11-08T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量"/>
+<meta name="twitter:description" content="Configure environment variables and zsh on ubuntu linux"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-posts'>old-posts</a>/<a href='https://xxxdgblog.github.io/old-posts/ubuntu_zsh_config'>ubuntu_zsh_config</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-posts/" typeof="ListItem">old-posts/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量</h1>
+<h1 id="ubuntu配置zshoh-my-zshprezto配置环境变量">Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量</h1>
+<h2 id="1ubuntu配置zsh">1、Ubuntu配置zsh</h2>
+<h3 id="11-为什么我们在ubuntu上配置zsh替代bash">1.1 为什么我们在Ubuntu上配置zsh替代bash？</h3>
+<p>不想了解的读者可直接跳过</p>
+<p>学过操作系统的读者可能知道，shell提供了一个连接操作系统的接口，它从我们这里收集输入并且根据输入执行程序。当一个程序执行完成时，它会显示程序的输出。也就是说，shell相当于一个“壳子”，用于人机交互。我们常见的shell有：</p>
+<ul>
+<li>bash</li>
+<li>zsh</li>
+<li>korn</li>
+<li>Tcsh</li>
+<li>Fish</li>
+</ul>
+<p>那zsh有什么优点呢?</p>
+<ul>
+<li>
+<p>兼容bash，熟悉bash的用户可以轻松上手</p>
+</li>
+<li>
+<p>有精彩绝伦的高亮功能</p>
+</li>
+<li>
+<p><strong>对颜值党来说，有诸多惊艳的主题</strong>（最吸引笔者这个菜鸡的地方）</p>
+</li>
+<li>
+<p>自动更正</p>
+</li>
+<li>
+<p>脚本语法相对简单</p>
+<p>等等</p>
+</li>
+</ul>
+<h3 id="12-安装配置zsh">1.2 安装配置zsh</h3>
+<p>查看当前的shell</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>echo $SHELL
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210232339294.png" alt="image-20221023233936197"></p>
+<p>安装zsh</p>
+<p>这里使用 <code>-y</code>，比如我们在安装的时候 需要我们输入    y   确认，这里就直接一行命令过了</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>// 如果有sudo的话跳过这一步
+</span></span><span style="display:flex;"><span>apt install sudo 
+</span></span><span style="display:flex;"><span>sudo apt install zsh -y
+</span></span></code></pre></div><p>切换到zsh， 同理，如果我们想要重新bash shell，<code>chsh -s /bin/bash</code>可以切换到bash  shell</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>chsh -s /bin/zsh
+</span></span></code></pre></div><p>重启</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>reboot
+</span></span></code></pre></div><p>但是有可能你重启之后发现，界面很丑，甚至不如原来的bash shell 好用，因此我们可以下载oh-my-zsh来借此美化我们的shell</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210232344333.png" alt="image-20221023234454294"></p>
+<h3 id="13-安装oh-my-zsh">1.3 安装oh-my-zsh</h3>
+<p>oh-my-zsh的优点:</p>
+<p>可以配置诸多主题，和便捷的插件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>// 安装git，已有的可以跳过
+</span></span><span style="display:flex;"><span>apt install git
+</span></span><span style="display:flex;"><span>apt install curl
+</span></span><span style="display:flex;"><span>sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210232352927.png" alt="image-20221023235207869"></p>
+<p>如果这个主题你觉得不错，那就不用换了，但是下面这个p10k主题是目前最受欢迎的之一。</p>
+<p>安装 p10k主题</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git clone --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> https://gitee.com/romkatv/powerlevel10k.git <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>$HOME/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/themes/powerlevel10k
+</span></span></code></pre></div><p>在用户的home目录下修改<code>.zshrc</code>文件, 修改主题&quot;powerlevel10k/powerlevel10k&quot;, 保存并退出</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>// 有vim可以跳过
+</span></span><span style="display:flex;"><span>apt install vim
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vim .zshrc
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240003348.png" alt="image-20221024000300301"></p>
+<p>生效文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source .zshrc
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240007669.png" alt="image-20221024000710610"></p>
+<p>这个配置根据自己的喜好，可以去去Google或者Bing搜索自己喜欢的主题，b站也有响应的教程，尽量一次配置好。这里我展示一个简介的配置</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240018657.png" alt="image-20221024001811609"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240018879.png" alt="image-20221024001847828"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240019327.png" alt="image-20221024001913283"></p>
+<ul>
+<li>这里选择Lean简洁风格，Rainbow则相对花哨美观</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240019778.png" alt="image-20221024001949696"></p>
+<ul>
+<li>字节设置为Unicode即可，避免乱码问题，如果读者遇到乱码问题，可以相应搜索解决方案，可能需要下载相应的字体</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240020695.png" alt="image-20221024002041651"></p>
+<ul>
+<li>选256种颜色，比较美观</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240021165.png" alt="image-20221024002123116"></p>
+<ul>
+<li>根据个人喜好，这里选择是不展示当前时间</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240021414.png" alt="image-20221024002156359"></p>
+<ul>
+<li>这个也是根据个人喜好选择输入在当前行还是下一行</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240022197.png" alt="image-20221024002229139"></p>
+<ul>
+<li>这个一般选2即可，稍微宽松一点</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240022075.png" alt="image-20221024002255017"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240024891.png" alt="image-20221024002404835"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240024532.png" alt="image-20221024002442479"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240025179.png" alt="image-20221024002502129"></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240025682.png" alt="image-20221024002527641"></p>
+<p>至此完成oh-my-zsh的配置，当然读者也可以选择花哨一点的，但是个人比较喜欢简洁风格</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240027557.png" alt="image-20221024002750508"></p>
+<p>如果读者不喜欢简洁风，我们可以使用命令重新对我们的powerlevel10k主题进行修改</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>p10k configure
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240050641.png" alt="image-20221024005004603"></p>
+<h3 id="14-安装prezto">1.4 安装prezto</h3>
+<p>prezto是oh-my-zsh的一个分支，基本上已对其重写，以使所有内容都更加干净和整洁，所以更加轻量（个人一直在使用）。</p>
+<p>这个安装教程在github上也有我直接给出地址:</p>
+<pre tabindex="0"><code>https://github.com/sorin-ionescu/prezto
+</code></pre><p>按照相应的步骤操作即可（前提是安装了zsh），由于是github，可能需要科学上网，读者如果对自己的网络非常自信的话，直接去github。这里笔者给出搬运的教程</p>
+<p>在用户的home目录下</p>
+<ol>
+<li></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone --recursive https://github.com/sorin-ionescu/prezto.git <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>ZDOTDIR<span style="color:#66d9ef">:-</span>$HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.zprezto&#34;</span>
+</span></span></code></pre></div><ol start="2">
+<li></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>setopt EXTENDED_GLOB
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> rcfile in <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>ZDOTDIR<span style="color:#66d9ef">:-</span>$HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>/.zprezto/runcoms/^README.md<span style="color:#f92672">(</span>.N<span style="color:#f92672">)</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  ln -s <span style="color:#e6db74">&#34;</span>$rcfile<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>ZDOTDIR<span style="color:#66d9ef">:-</span>$HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.</span><span style="color:#e6db74">${</span>rcfile:t<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><ol start="3">
+<li></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chsh -s /bin/zsh
+</span></span></code></pre></div><p>新建一个zsh terminal 查看结果，也是相对比较简洁好用，而且相对于oh-my-zsh</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240044020.png" alt="image-20221024004455976"></p>
+<h2 id="2-配置环境变量">2、 配置环境变量</h2>
+<p>既然我们换了一种shell外壳，环境变量的配置也会有些许相应的改变，这里以配置golang语言的环境变量等为例</p>
+<p>在用户的home目录下</p>
+<ul>
+<li>下载go语言安装包</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo wget https://golang.google.cn/dl/go1.17.5.linux-amd64.tar.gz
+</span></span></code></pre></div><ul>
+<li>解压</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo tar xfz go1.18.5.linux-amd64.tar.gz -C /usr/local
+</span></span></code></pre></div><ul>
+<li><code>sudo vim .zshrc</code>，在后面添加以下代码，保存退出</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export GOROOT<span style="color:#f92672">=</span>/usr/local/go
+</span></span><span style="display:flex;"><span>export GOPATH<span style="color:#f92672">=</span>$HOME/gowork
+</span></span><span style="display:flex;"><span>export GOBIN<span style="color:#f92672">=</span>$GOPATH/bin
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span>$GOPATH:$GOBIN:$GOROOT/bin:$PATH
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240057838.png" alt="image-20221024005723748"></p>
+<ul>
+<li><code>.zshrc</code>文件中配置的环境变量生效</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> source .zshrc
+</span></span></code></pre></div><ul>
+<li>测试</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go env
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240100724.png" alt="image-20221024010027667"></p>
+<p>重启一个zsh 终端，再次输入<code>go env</code> 命令测试</p>
+<p>新建一个main.go</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch main.go
+</span></span><span style="display:flex;"><span>vim main.go
+</span></span></code></pre></div><p>代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello, 你好&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go run main.go
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202210240107163.png" alt="image-20221024010730125"></p>
+<p>至此，我们完成了Ubuntu对zsh的一些相应的配置</p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

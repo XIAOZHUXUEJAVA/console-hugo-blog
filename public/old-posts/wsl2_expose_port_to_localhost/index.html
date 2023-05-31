@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-posts/wsl2_expose_port_to_localhost/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="WSL2暴露端口给主机，在主机的浏览器中访问该端口" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-posts/wsl2_expose_port_to_localhost/" /><meta property="article:published_time" content="2023-02-22T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="WSL2暴露端口给主机，在主机的浏览器中访问该端口"/>
+<meta name="twitter:description" content="WSL2 Expose Port To Localhost"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-posts'>old-posts</a>/<a href='https://xxxdgblog.github.io/old-posts/wsl2_expose_port_to_localhost'>wsl2_expose_port_to_localhost</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-posts/" typeof="ListItem">old-posts/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>WSL2暴露端口给主机，在主机的浏览器中访问该端口</h1>
+<h1 id="wsl2-暴露端口给主机在主机的浏览器中访问该端口">WSL2 暴露端口给主机，在主机的浏览器中访问该端口</h1>
+<ol>
+<li>
+<p>在 WSL2 中启动您的应用程序，并监听 9090 端口。您可以在 WSL2 终端中使用命令行启动您的应用程序，例如：</p>
+<pre tabindex="0"><code>$ go run server.go
+</code></pre><p>这个命令将启动一个 Python Web 应用程序，监听 9090 端口。如果您的应用程序使用其他语言或框架，需要相应地进行调整。</p>
+</li>
+<li>
+<p>在 WSL2 中获取您的 WSL2 IP 地址。您可以在 WSL2 终端中使用以下命令来获取 IP 地址：</p>
+<pre tabindex="0"><code>$ ip addr show eth0 | grep inet | awk &#39;{ print $2; }&#39; | sed &#39;s/\/.*$//&#39;
+</code></pre><p>这个命令将返回 WSL2 中的 IP 地址。请将该 IP 地址记录下来，稍后会用到。</p>
+</li>
+<li>
+<p>在 Windows 10 中启动 PowerShell，以管理员身份运行。在 PowerShell 或者 CMD 中，使用以下命令来开放 WSL2 的 9090 端口：</p>
+<pre tabindex="0"><code>netsh interface portproxy add v4tov4 listenport=9090 listenaddress=0.0.0.0 connectport=9090 connectaddress=&lt;wsl2_ip_address&gt;
+</code></pre><p>将 <code>&lt;wsl2_ip_address&gt;</code> 替换为您在上一步中获取的 WSL2 IP 地址。</p>
+</li>
+<li>
+<p>在 Windows 10 中启动浏览器，并输入以下地址：</p>
+<pre tabindex="0"><code>http://localhost:9090
+</code></pre></li>
+</ol>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

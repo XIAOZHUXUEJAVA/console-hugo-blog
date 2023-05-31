@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-posts/为什么有些网址有些怪/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="每日小知识点(五) - 为什么有些网址存在大量的百分号、字母和数字？" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-posts/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E7%BD%91%E5%9D%80%E6%9C%89%E4%BA%9B%E6%80%AA/" /><meta property="article:published_time" content="2023-05-10T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="每日小知识点(五) - 为什么有些网址存在大量的百分号、字母和数字？"/>
+<meta name="twitter:description" content="Daily Little Knowledge Points"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-posts'>old-posts</a>/<a href='https://xxxdgblog.github.io/old-posts/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E7%BD%91%E5%9D%80%E6%9C%89%E4%BA%9B%E6%80%AA'>%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E7%BD%91%E5%9D%80%E6%9C%89%E4%BA%9B%E6%80%AA</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-posts/" typeof="ListItem">old-posts/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>每日小知识点(五) - 为什么有些网址存在大量的百分号、字母和数字？</h1>
+<h1 id="为什么有些网址存在大量的百分号字母和数字">为什么有些网址存在大量的百分号、字母和数字？</h1>
+<p>今天，我给一个朋友分享了我刚写的一篇文章的链接。在我的浏览器中，我看到的链接是这样的：</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202305102011074.png" alt="URL with percent-encoding"></p>
+<p>但是当我把这个链接复制给我的朋友时，我发现这个链接发生了巨大的变化：</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202305102013133.png" alt="URL after copying"></p>
+<p>为什么汉字变成了这么多的字母、数字和百分号？</p>
+<p>通过 Google 搜索，我得知：</p>
+<p>原因在于 URL 中只能包含 ASCII 码（字符编码范围是 0 ～ 127）的字符，而汉字、特殊字符等非 ASCII 码字符是不能直接出现在 URL 中的，需要进行编码转换后才能在 URL 中使用。</p>
+<p>例如，对于汉字 “中”，它的 Unicode 编码是 U4E2D，对应着 UTF-8 编码是 E4 B8 AD。在 URL 中，需要将其转换为 %E4% B8%AD 的形式，其中“%”后面的两个十六进制数字表示该字符的 UTF-8 编码，即“E4B8AD”。这种编码方式被称为百分号编码（Percent-encoding）或 URL 编码（URL encoding），用于将 URL 中的非 ASCII 码字符转换为 ASCII 码字符序列。</p>
+<ul>
+<li>汉字的 Unicode 表示：这四个汉字的 Unicode 表示如下：
+<ul>
+<li>&lsquo;面&rsquo; 的 Unicode 表示为 \u9762</li>
+<li>&lsquo;向&rsquo; 的 Unicode 表示为 \u5411</li>
+<li>&lsquo;过&rsquo; 的 Unicode 表示为 \u8FC7</li>
+<li>&lsquo;程&rsquo; 的 Unicode 表示为 \u7A0B</li>
+</ul>
+</li>
+<li>汉字的 UTF-8 表示：这四个汉字的 UTF-8 表示如下：
+<ul>
+<li>&lsquo;面&rsquo; 的 UTF-8 表示为 E9 9D A2</li>
+<li>&lsquo;向&rsquo; 的 UTF-8 表示为 E5 90 91</li>
+<li>&lsquo;过&rsquo; 的 UTF-8 表示为 E8 BF 87</li>
+<li>&lsquo;程&rsquo; 的 UTF-8 表示为 E7 A8 8B</li>
+</ul>
+</li>
+</ul>
+<p>注意，以上 UTF-8 表示是<strong>每个汉字各占用三个字节</strong>。</p>
+<p><strong>因此，在一些网址中会存在大量的百分号、字母和数字的形式，用于对 URL 进行编码转换。这样可以确保 URL 在网络传输过程中不会出现解析错误、乱码等问题，确保在不同的浏览器、操作系统、设备上都可以正常地打开。</strong></p>
+<p>最后，我又通过 在线工具 测试一下：</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/GraphBed/main/img/202305102052453.png" alt="image-20230510205218388"></p>
+<p><strong>题外话：Unicode 和 UTF-8 的区别</strong></p>
+<p>Unicode 和 UTF-8 都是用于字符编码和字符集的标准。它们都是为了解决国际化和多语言编程的问题而产生的。</p>
+<p>Unicode 是一个字符集标准，它定义了一种标准的字符集，并为字符分配了唯一的编码值。Unicode 中，每个字符都拥有一个唯一的代码点，代码点是一组数字，通常用 16 进制数表示。Unicode 能够表示全球范围内的所有字符，包括汉字、拉丁字母、希腊字母、日文字母等等。</p>
+<p>UTF-8 是一种可变长度编码，它将 <strong>Unicode 字符集中的每个字符编码成一个字节序列</strong>。UTF-8 的编码方式与 ASCII 码兼容，符合规则的 ASCII 码使用一个字节编码，而非 ASCII 码的字符使用两个或多个字节编码。UTF-8 通过在编码时使用不同长度的字节序列来表示 Unicode 字符，这样能够表示所有的 Unicode 字符，并且可以处理二进制数据，适用于计算机系统内部和各种文件格式的存储和处理。</p>
+<p>因此，<strong>Unicode 是一种字符编码标准，而 UTF-8 是一种字符编码实现。UTF-8 基于 Unicode 标准，使用了 Unicode 中的字符集和编码，扩展了 Unicode 的能力，并且具有向后兼容性，是目前使用最广泛的国际化字符编码方案。</strong></p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

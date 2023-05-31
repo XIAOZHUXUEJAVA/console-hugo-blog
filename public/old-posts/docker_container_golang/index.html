@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-posts/docker_container_golang/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="docker容器化golang应用" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-posts/docker_container_golang/" /><meta property="article:published_time" content="2022-11-12T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="docker容器化golang应用"/>
+<meta name="twitter:description" content="Containerize your golang application"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-posts'>old-posts</a>/<a href='https://xxxdgblog.github.io/old-posts/docker_container_golang'>docker_container_golang</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-posts/" typeof="ListItem">old-posts/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>docker容器化golang应用</h1>
+<h1 id="docker容器化golang应用">docker容器化golang应用</h1>
+<p>前言：为什么使用容器化技术？</p>
+<p>相比于虚拟机容器化技术的优点：</p>
+<ul>
+<li>启动快</li>
+<li>硬盘使用量小</li>
+<li>性能好</li>
+<li>系统支持量大</li>
+<li>有理须开发环境和生产环境的协调</li>
+</ul>
+<p>看看这个小demo的目录结构，非常简单，新建一个docker-go文件夹，然后再这个文件夹中新建一个<strong>Dockerfile</strong>文件和<strong>server.go</strong></p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/MyGraphBed/master/image-20221003170329772.png" alt="image-20221003170329772"></p>
+<h2 id="1-编写一个简单的go-server-应用">1. 编写一个简单的go server 应用</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;html&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;log&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;launching server at port 9090&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintf</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;hello, %q&#34;</span>, <span style="color:#a6e22e">html</span>.<span style="color:#a6e22e">EscapeString</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Path</span>))
+</span></span><span style="display:flex;"><span>	})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:9090&#34;</span>, <span style="color:#66d9ef">nil</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>如果我们的宿主机本身就有go环境的话，我们可以试试这个程序是否正确</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go run server.go
+</span></span></code></pre></div><p>浏览器地址中输入<code>http://localhost:9090/docker-go</code>，如果返回成功即说明程序没有问题</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/MyGraphBed/master/image-20221003170345130.png" alt="image-20221003170345130"></p>
+<h2 id="2-创建dockerfile文件">2. 创建Dockerfile文件</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> golang:latest</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> mkdir /app<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ADD</span> . /app<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> go build -o main ./server.go<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 9090</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> /app/main<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Dockerfile文件的各行命令代码的作用：</p>
+<ul>
+<li>
+<p><strong>FROM golang:latest</strong>   以golang的最新的镜像为基础镜像创建</p>
+</li>
+<li>
+<p><strong>RUN mkdir /app</strong>   在容器中创建一个app文件夹</p>
+</li>
+<li>
+<p><strong>WORKDIR /app</strong>   将这个app认为默认工作文件夹</p>
+</li>
+<li>
+<p><strong>ADD . /app</strong>	将当前目录的下的所有文件加入到这个app工作文件夹中</p>
+</li>
+<li>
+<p><strong>RUN go build -o main ./server.go</strong>  开始build server.go名称任意  (是你的go项目的程序入口)</p>
+</li>
+<li>
+<p><strong>EXPOSE 9090</strong>  向外面暴露9090端口</p>
+</li>
+<li>
+<p><strong>CMD /app/main</strong>  然后运行我们build的生成的可执行文件main.exe</p>
+</li>
+</ul>
+<p>插叙：</p>
+<p>如果我们的宿主机环境中没有go语言支持，那么我们无法验证这个程序是否正确，可以首先在环境中安装自己的go语言工作环境，然后测试后进行镜像打包，如果创建镜像后运行的容器实例也没有问题，那么相当于两次测试，一次是在你的宿主机上的测试，一次是在容器中的测试。</p>
+<h2 id="3-创建一个镜像">3. 创建一个镜像</h2>
+<p>在宿主机的Dockfile文件所在的目录下, 运行命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker build . -t my-go-env1
+</span></span></code></pre></div><p>my-go-env1为这个镜像的名称</p>
+<p>build . 表示当前目录  即我们Dockerfile所在的文件夹</p>
+<p>如果没有报错的话，我们可以使用以下命令来查看镜像是否创建成功</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker image ls
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/MyGraphBed/master/image-20221003170411373.png" alt="image-20221003170411373"></p>
+<h2 id="4-运行镜像创建容器">4. 运行镜像创建容器</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d  -p 9090:9090 --name go-demo1 my-go-env1
+</span></span></code></pre></div><ul>
+<li>
+<p>-d 表示后台运行</p>
+</li>
+<li>
+<p>-p 表示端口映射  将本地的9090端口映射到容器的9090端口</p>
+</li>
+<li>
+<p>go-demo 新建的容器的名称</p>
+</li>
+<li>
+<p>my-go-env1 容器所使用的镜像的名称</p>
+</li>
+</ul>
+<p>查看当前有哪些容器在运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker container ls
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/MyGraphBed/master/image-20221003170802220.png" alt="image-20221003170802220"></p>
+<p>然后去本地浏览器测试一下是否9090可用（确保先关闭宿主机上之前的测试）</p>
+<p><img src="https://raw.githubusercontent.com/XIAOZHUXUEJAVA/MyGraphBed/master/image-20221003170846628.png" alt="image-20221003170846628"></p>
+<p>至此，我们简单的容器化了我们的golang应用</p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

@@ -9,154 +9,154 @@
     <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust中的一些比较常用的基础语法(持续更新)</title>
-      <link>https://xxxdgblog.github.io/old-post/rust_syntax/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust_syntax/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust_syntax/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust_syntax/</guid>
       <description>Commonly Used Syntax in Rust</description>
     </item>
     
     <item>
       <title>Three Sum Review</title>
-      <link>https://xxxdgblog.github.io/old-post/three_sum_review/</link>
+      <link>https://xxxdgblog.github.io/old-posts/three_sum_review/</link>
       <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/three_sum_review/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/three_sum_review/</guid>
       <description>Three Sum Review</description>
     </item>
     
     <item>
       <title>不同的二叉搜索树</title>
-      <link>https://xxxdgblog.github.io/old-post/unique_binary_search_tree/</link>
+      <link>https://xxxdgblog.github.io/old-posts/unique_binary_search_tree/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/unique_binary_search_tree/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/unique_binary_search_tree/</guid>
       <description>Unique Binary Search Tree</description>
     </item>
     
     <item>
       <title>整数拆分</title>
-      <link>https://xxxdgblog.github.io/old-post/integer_break/</link>
+      <link>https://xxxdgblog.github.io/old-posts/integer_break/</link>
       <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/integer_break/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/integer_break/</guid>
       <description>Integer Break</description>
     </item>
     
     <item>
       <title>不同路径II</title>
-      <link>https://xxxdgblog.github.io/old-post/unique_paths_ii/</link>
+      <link>https://xxxdgblog.github.io/old-posts/unique_paths_ii/</link>
       <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/unique_paths_ii/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/unique_paths_ii/</guid>
       <description>Unique Paths ii</description>
     </item>
     
     <item>
       <title>不同路径</title>
-      <link>https://xxxdgblog.github.io/old-post/unique_paths/</link>
+      <link>https://xxxdgblog.github.io/old-posts/unique_paths/</link>
       <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/unique_paths/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/unique_paths/</guid>
       <description>Unique Paths</description>
     </item>
     
     <item>
       <title>下一个排列</title>
-      <link>https://xxxdgblog.github.io/old-post/next_permutation/</link>
+      <link>https://xxxdgblog.github.io/old-posts/next_permutation/</link>
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/next_permutation/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/next_permutation/</guid>
       <description>Next Permutation</description>
     </item>
     
     <item>
       <title>Rust-Modules</title>
-      <link>https://xxxdgblog.github.io/old-post/rust_modules/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust_modules/</link>
       <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust_modules/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust_modules/</guid>
       <description>Learn Rust (Just For Fun)</description>
     </item>
     
     <item>
       <title>Rust-Strings</title>
-      <link>https://xxxdgblog.github.io/old-post/rust_.strings/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust_.strings/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust_.strings/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust_.strings/</guid>
       <description>Learn Rust (Just For Fun)</description>
     </item>
     
     <item>
       <title>Rustlings-Enums</title>
-      <link>https://xxxdgblog.github.io/old-post/rust-enums/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust-enums/</link>
       <pubDate>Sat, 25 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust-enums/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust-enums/</guid>
       <description>Learn Rust (Just For Fun)</description>
     </item>
     
     <item>
       <title>Rust-Structs</title>
-      <link>https://xxxdgblog.github.io/old-post/rust_struct/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust_struct/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust_struct/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust_struct/</guid>
       <description>Learn Rust (Just For Fun)</description>
     </item>
     
     <item>
       <title>Rustlings-Move-Semantics</title>
-      <link>https://xxxdgblog.github.io/old-post/rust_move_semantics/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust_move_semantics/</link>
       <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust_move_semantics/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust_move_semantics/</guid>
       <description>Learn Rust (Just For Fun)</description>
     </item>
     
     <item>
       <title>Rustlings-Vecs</title>
-      <link>https://xxxdgblog.github.io/old-post/rust_vecs/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust_vecs/</link>
       <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust_vecs/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust_vecs/</guid>
       <description>Learn Rust (Just For Fun)</description>
     </item>
     
     <item>
       <title>使用最小花费爬楼梯</title>
-      <link>https://xxxdgblog.github.io/old-post/min_cost_climbing_stairs/</link>
+      <link>https://xxxdgblog.github.io/old-posts/min_cost_climbing_stairs/</link>
       <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/min_cost_climbing_stairs/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/min_cost_climbing_stairs/</guid>
       <description>Min Cost Climbing Stairs</description>
     </item>
     
     <item>
       <title>Rustlings-Variables</title>
-      <link>https://xxxdgblog.github.io/old-post/rust_variables/</link>
+      <link>https://xxxdgblog.github.io/old-posts/rust_variables/</link>
       <pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/rust_variables/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/rust_variables/</guid>
       <description>Learn Rust (Just For Fun)</description>
     </item>
     
     <item>
       <title>最接近的三数之和</title>
-      <link>https://xxxdgblog.github.io/old-post/three_sum_closest/</link>
+      <link>https://xxxdgblog.github.io/old-posts/three_sum_closest/</link>
       <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/three_sum_closest/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/three_sum_closest/</guid>
       <description>Three Sum Closest</description>
     </item>
     
     <item>
       <title>搜索旋转数组</title>
-      <link>https://xxxdgblog.github.io/old-post/search_in_rotated_sorted_array/</link>
+      <link>https://xxxdgblog.github.io/old-posts/search_in_rotated_sorted_array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/search_in_rotated_sorted_array/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/search_in_rotated_sorted_array/</guid>
       <description>Search in Rotated Sorted Array</description>
     </item>
     

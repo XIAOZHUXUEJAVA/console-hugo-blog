@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 12 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker容器化golang应用</title>
-      <link>https://xxxdgblog.github.io/old-post/docker_container_golang/</link>
+      <link>https://xxxdgblog.github.io/old-posts/docker_container_golang/</link>
       <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/docker_container_golang/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/docker_container_golang/</guid>
       <description>Containerize your golang application</description>
     </item>
     

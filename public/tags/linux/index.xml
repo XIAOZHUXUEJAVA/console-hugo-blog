@@ -9,100 +9,100 @@
     <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WSL2，显示 [已退出进程，代码为 4294967295] 的解决方案(NEW)</title>
-      <link>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_3/</link>
+      <link>https://xxxdgblog.github.io/old-posts/record_a_bug_wsl2_3/</link>
       <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_3/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/record_a_bug_wsl2_3/</guid>
       <description>record a bug in wsl2</description>
     </item>
     
     <item>
       <title>Surf Internet In Linux</title>
-      <link>https://xxxdgblog.github.io/old-post/surf_internet/</link>
+      <link>https://xxxdgblog.github.io/old-posts/surf_internet/</link>
       <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/surf_internet/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/surf_internet/</guid>
       <description>Surf Internet In Linux</description>
     </item>
     
     <item>
       <title>Ubuntu20.04 Install MySQL8  ERROR 2002 (HY000)</title>
-      <link>https://xxxdgblog.github.io/old-post/ubuntu_install_mysql/</link>
+      <link>https://xxxdgblog.github.io/old-posts/ubuntu_install_mysql/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/ubuntu_install_mysql/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/ubuntu_install_mysql/</guid>
       <description>Docker Ubuntu Container SetUp</description>
     </item>
     
     <item>
       <title>WSL2暴露端口给主机，在主机的浏览器中访问该端口</title>
-      <link>https://xxxdgblog.github.io/old-post/wsl2_expose_port_to_localhost/</link>
+      <link>https://xxxdgblog.github.io/old-posts/wsl2_expose_port_to_localhost/</link>
       <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/wsl2_expose_port_to_localhost/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/wsl2_expose_port_to_localhost/</guid>
       <description>WSL2 Expose Port To Localhost</description>
     </item>
     
     <item>
       <title>使用Shell脚本文件配置Docker Ubuntu Container</title>
-      <link>https://xxxdgblog.github.io/old-post/ubuntu_shell/</link>
+      <link>https://xxxdgblog.github.io/old-posts/ubuntu_shell/</link>
       <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/ubuntu_shell/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/ubuntu_shell/</guid>
       <description>Docker Ubuntu Container SetUp Use Shell</description>
     </item>
     
     <item>
       <title>docker 完善一个Ubuntu容器</title>
-      <link>https://xxxdgblog.github.io/old-post/ubuntu_setup/</link>
+      <link>https://xxxdgblog.github.io/old-posts/ubuntu_setup/</link>
       <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/ubuntu_setup/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/ubuntu_setup/</guid>
       <description>Docker Ubuntu Container SetUp</description>
     </item>
     
     <item>
       <title>记录一个wsl2的BUG, 已解决</title>
-      <link>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_2/</link>
+      <link>https://xxxdgblog.github.io/old-posts/record_a_bug_wsl2_2/</link>
       <pubDate>Fri, 09 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_2/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/record_a_bug_wsl2_2/</guid>
       <description>record a bug in wsl2</description>
     </item>
     
     <item>
       <title>记录一个wsl2的BUG</title>
-      <link>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_1/</link>
+      <link>https://xxxdgblog.github.io/old-posts/record_a_bug_wsl2_1/</link>
       <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/record_a_bug_wsl2_1/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/record_a_bug_wsl2_1/</guid>
       <description>record a bug in wsl2</description>
     </item>
     
     <item>
       <title>Ubuntu配置zsh、oh-my-zsh、prezto，配置环境变量</title>
-      <link>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</link>
+      <link>https://xxxdgblog.github.io/old-posts/ubuntu_zsh_config/</link>
       <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/ubuntu_zsh_config/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/ubuntu_zsh_config/</guid>
       <description>Configure environment variables and zsh on ubuntu linux</description>
     </item>
     
     <item>
       <title>docker 容器和镜像的备份</title>
-      <link>https://xxxdgblog.github.io/old-post/dockerpush/</link>
+      <link>https://xxxdgblog.github.io/old-posts/dockerpush/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/dockerpush/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/dockerpush/</guid>
       <description>To save and push docker container</description>
     </item>
     
     <item>
       <title>docker 运行一个Ubuntu 容器 无法启动的问题</title>
-      <link>https://xxxdgblog.github.io/old-post/ubuntu_container_start_error/</link>
+      <link>https://xxxdgblog.github.io/old-posts/ubuntu_container_start_error/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/ubuntu_container_start_error/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/ubuntu_container_start_error/</guid>
       <description>To solve the problem that ubuntu_container_start_error</description>
     </item>
     

@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 18 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git分支的使用和如何回滚你的代码</title>
-      <link>https://xxxdgblog.github.io/old-post/git_branch/</link>
+      <link>https://xxxdgblog.github.io/old-posts/git_branch/</link>
       <pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xxxdgblog.github.io/old-post/git_branch/</guid>
+      <guid>https://xxxdgblog.github.io/old-posts/git_branch/</guid>
       <description>git branch and roll back your code</description>
     </item>
     

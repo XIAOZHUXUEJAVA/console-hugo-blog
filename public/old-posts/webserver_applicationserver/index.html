@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-posts/webserver_applicationserver/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="每日小知识点(一) - 服务器" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-posts/webserver_applicationserver/" /><meta property="article:published_time" content="2023-03-20T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="每日小知识点(一) - 服务器"/>
+<meta name="twitter:description" content="Daily Little Knowledge Points"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-posts'>old-posts</a>/<a href='https://xxxdgblog.github.io/old-posts/webserver_applicationserver'>webserver_applicationserver</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-posts/" typeof="ListItem">old-posts/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>每日小知识点(一) - 服务器</h1>
+<h1 id="每日小知识点一---服务器">每日小知识点(一) - 服务器</h1>
+<h2 id="web-服务器和应用服务器的区别">Web 服务器和应用服务器的区别</h2>
+<p>Web 服务器和应用服务器是两种不同类型的服务器，它们在功能和用途上有所不同。</p>
+<p>Web 服务器是一个基于 HTTP 协议的服务器，它<strong>主要用于处理静态资源的请求</strong>，如 HTML 页面、图像、视频、CSS、JavaScript 等。它通常由像 Apache、Nginx、IIS 这样的服务器软件来实现。Web 服务器接收到客户端的请求后，返回静态资源，不会对这些资源进行处理，因为它没有具备解析、编译、执行动态脚本等功能。Web 服务器主要负责 HTTP 协议的解析和响应，<strong>用于向客户端提供访问静态资源的服务</strong>。</p>
+<p>应用服务器是一种<strong>提供动态资源处理</strong>的服务器，它通常用于处理 Web 应用程序的请求，例如 Java、PHP、Python 等 Web 应用程序。应用服务器通常由像 Tomcat、JBoss、WebLogic 这样的应用服务器软件来实现。<strong>应用服务器的主要作用是接收客户端请求，处理请求后返回动态生成的 HTML、XML 或 JSON 等数据格式，通过应用服务器实现动态内容的生成和响应</strong>。应用服务器还可以提供支持事务管理、并发控制、对象池等功能的应用程序运行环境，保证应用程序的稳定性和可靠性。</p>
+<p>一句话总结就是，<strong>Web 服务器主要负责静态资源的处理和服务，而应用服务器则提供动态资源处理的功能</strong>，支持 Web 应用程序的运行和管理。两种服务器通常会结合使用，以提供完整的 Web 服务。</p>
+<p>常见的 Web 服务器: Apache HTTP Server、<strong>Nginx</strong>、Microsoft IIS</p>
+<p>常见的应用服务器: <strong>Tomcat</strong>、JBoss、WebSphere、WebLogic 等。熟悉 Java SpringBoot 框架的可能知道 SpringBoot 框架内置了 Tomcat 服务器，便于我们的开发和部署。</p>
+<h2 id="tomcat-servlet-和-jsp-的区别和联系">Tomcat Servlet 和 JSP 的区别和联系</h2>
+<p>Tomcat、Servlet 和 JSP 是 Java Web 应用程序的三个核心组件，它们之间的关系如下：</p>
+<p><strong>Tomcat 是一个 Servlet 容器，它提供了 Servlet 的运行环境和管理功能，可以接收和处理 Servlet 请求，同时也可以处理 JSP。</strong></p>
+<p>Servlet 是一种 Java 程序，它可以运行在 Tomcat 这样的 Servlet 容器中，<strong>用于接收和处理客户端的 HTTP 请求</strong>，并生成 HTTP 响应。Servlet 通常被用来生成动态网页、处理表单提交、访问数据库等任务。</p>
+<p>JSP（JavaServer Pages）是一种动态网页技术，<strong>它允许开发人员将 Java 代码嵌入到 HTML 页面中</strong>，以生成动态内容。JSP 通常被编译成 Servlet 并由 Tomcat 容器执行。</p>
+<p>总结一下:</p>
+<ol>
+<li>Tomcat 提供了 Servlet 容器的运行环境</li>
+<li>Servlet 接收和处理客户端请求，</li>
+<li>JSP 可以将 Java 代码嵌入到 HTML 页面中，以实现动态生成网页的功能。</li>
+<li>开发人员可以使用 Servlet 和 JSP 来开发动态 Web 应用程序，而 Tomcat 提供了运行和管理这些 Web 应用程序所需的基础设施。</li>
+</ol>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>

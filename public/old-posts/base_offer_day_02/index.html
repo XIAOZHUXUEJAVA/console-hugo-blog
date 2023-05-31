@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>littlepig/old-posts/base_offer_day_02/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/terminal-0.7.2.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://xxxdgblog.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="剑指Offer-面试题篇-Day02" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxxdgblog.github.io/old-posts/base_offer_day_02/" /><meta property="article:published_time" content="2023-03-15T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="剑指Offer-面试题篇-Day02"/>
+<meta name="twitter:description" content="For Job"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://xxxdgblog.github.io/" class="no-style site-name">littlepig</a>:~# 
+              <a href='https://xxxdgblog.github.io/old-posts'>old-posts</a>/<a href='https://xxxdgblog.github.io/old-posts/base_offer_day_02'>base_offer_day_02</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://xxxdgblog.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+                <li><a href="https://xxxdgblog.github.io/old-posts/" typeof="ListItem">old-posts/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>剑指Offer-面试题篇-Day02</h1>
+<h1 id="基础篇-day02">基础篇 day02</h1>
+<h2 id="1-fanal-的用法">1. fanal 的用法</h2>
+<ul>
+<li>被 final 修饰的方法<strong>不能被继承</strong></li>
+<li>被 final 修饰的方法<strong>不能被重写</strong></li>
+<li>被 final 修饰的变量<strong>不能被改变</strong>。如果修饰引用，那么引用不可变，引用指向的内容可变。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.zhu<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @description: TestFinal
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date: 2023/3/15 22:32
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @version: 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestFinal</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 这句话会导致编译报错，因为 x 是 final 的， 不能被重新赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// x = 10;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">final</span> String str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>str<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// str对象本身中的内容可以被修改
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        str<span style="color:#f92672">.</span><span style="color:#a6e22e">toLowerCase</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>str<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// str是final的， 不能再指向其他对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//        str = &#34;hi&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>被 final 修饰的方法，在编译阶段会存入常量池</p>
+</li>
+<li>
+<p>被 final 修饰的方法，jvm 会尝试将其内联，提高运行效率</p>
+<p>内联是指在编译时将函数调用直接替换为函数体，以减少函数调用的开销。这种优化技术可以消除函数调用的开销，因为调用函数会导致程序跳转到另一个地址执行代码，然后返回到原来的位置。如果函数内联，则函数体的代码将直接嵌入到调用它的位置，而不需要跳转和返回，从而可以提高程序的性能。</p>
+<p>简单通俗的来讲，就是方法内部调用其他方法的逻辑，直接替换为被调用的方法，这样之后就不用再调用方法了，提高了性能，不过并不是所有的都是和内联的</p>
+</li>
+</ul>
+<h2 id="2-3--01--03-返回值是什么">2. 3 * 0.1 == 0.3 返回值是什么</h2>
+<p><strong>返回 false. 因为有些浮点数不能完全精确的表示出来</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @description: TestFloat
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date: 2023/3/15 22:52
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @version: 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestFloat</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.1</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0.3</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>运行结果</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ae81ff">0.30000000000000004</span> <span style="color:#75715e">// 这里确实没有表示出来
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h2 id="3-a--a--b-和-a--b-的区别">3. a = a + b 和 a += b 的区别</h2>
+<p>a += b 如果 a 和 b 的类型不一致的话， 会进行隐式的强制类型转换</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">short</span> s1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s1 <span style="color:#f92672">=</span> s1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span></code></pre></div><p>short 类型在进行运算时会自动提升为 int 类型,也就是说 s1+1 的运算结果是 int 类型,而 s1 是</p>
+<p>short 类型,此时编译器会报错</p>
+<h2 id="4-try-catch-finally-如果-try-里有-return-finally-里的内容还会执行吗">4. try catch finally 如果 try 里有 return finally 里的内容还会执行吗？</h2>
+<ul>
+<li>
+<p>会执行， 并且执行顺序在 return 之前，所以 finally 代码块中最好不要包含 return，这样程序会提前退出，返回值不是 try 或者 catch 中的内容</p>
+</li>
+<li>
+<p>不管有没有出现异常，finally 代码块中的代码都会执行</p>
+</li>
+<li>
+<p>try 和 catch 中出现 return ，finally 仍然会执行</p>
+</li>
+<li>
+<p>return 的值实在 finally 之前确定的，先把返回的值保存起来</p>
+</li>
+</ul>
+<h2 id="5-static-有哪些用法">5. static 有哪些用法</h2>
+<p>所有的人都知道 static 关键字这两个基本的用法:<strong>静态变量和静态方法</strong>.<strong>也就是被 static 所修饰的变量/</strong></p>
+<p><strong>方法都属于类的静态资源,类实例所共享.</strong></p>
+<p>除了静态变量和静态方法之外,static 也用于静态块,多用于初始化操作，Mybatis 中 SqlSessionFactory 的创建的时候，我们并不需要频繁创建，初始化一次就行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.zhu.utils<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.io.Resources<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSession<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSessionFactory<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSessionFactoryBuilder<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @description: utils
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date: 2023/3/11 13:39
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @version: 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MybatisUtils</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> SqlSessionFactory factory<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#f92672">{</span><span style="color:#75715e">//在静态代码块下，factory只会被创建一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;===============static factory===============&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            InputStream is <span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mybatis-config.xml&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>is<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// TODO Auto-generated catch block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> SqlSession <span style="color:#a6e22e">createSqlSession</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span><span style="color:#75715e">//true 为自动提交事务
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">closeSqlSession</span><span style="color:#f92672">(</span>SqlSession sqlSession<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">!=</span> sqlSession<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>静态导包</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.zhu<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import static</span> java.lang.Math.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @description: TestStatic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date: 2023/3/16 9:43
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @version: 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestStatic</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>max<span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 正常情况下我们需要使用的是Math.max();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="6-java-创建对象的几种方式">6. java 创建对象的几种方式</h2>
+<ul>
+<li>new 创建新对象</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Person person <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">();</span>
+</span></span></code></pre></div><ul>
+<li>通过反射机制</li>
+<li>采用 clone 机制</li>
+</ul>
+<p>​ 类需要实现 Clonable 接口，重写 clone 方法</p>
+<ul>
+<li>通过反序列化的方式</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.zhu<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.commons.lang3.SerializationUtils<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @description: TestCreateObject
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date: 2023/3/16 9:07
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @version: 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestCreateObject</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1、 通过反射机制创建对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Class<span style="color:#f92672">&lt;</span>Teacher<span style="color:#f92672">&gt;</span> teacherClass <span style="color:#f92672">=</span> Teacher<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Teacher teacher <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            teacher <span style="color:#f92672">=</span> teacherClass<span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            teacher<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;xiaoduo&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InstantiationException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IllegalAccessException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;teacher &#34;</span> <span style="color:#f92672">+</span> teacher<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//        2、 通过克隆的方式创建对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Teacher teacher1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Teacher<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        teacher1<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;xiaoduoge&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;teacher1 &#34;</span> <span style="color:#f92672">+</span> teacher1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Teacher teacher2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            teacher2 <span style="color:#f92672">=</span> teacher1<span style="color:#f92672">.</span><span style="color:#a6e22e">clone</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>CloneNotSupportedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;teacher2 &#34;</span> <span style="color:#f92672">+</span> teacher2<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>teacher1 <span style="color:#f92672">==</span> teacher2<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>teacher2<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>teacher1<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// clone出来的是一个全新的对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//        3、通过反序列化的机制创建一个对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        Teacher teacher3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Teacher<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        teacher3<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;xiaozhu&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;teacher3 &#34;</span> <span style="color:#f92672">+</span> teacher3<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 引入common lang 工具依赖
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes <span style="color:#f92672">=</span> SerializationUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">serialize</span><span style="color:#f92672">(</span>teacher3<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Teacher teacher4 <span style="color:#f92672">=</span> SerializationUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">deserialize</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;teacher4 &#34;</span> <span style="color:#f92672">+</span> teacher4<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>teacher3 <span style="color:#f92672">==</span> teacher4<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="7深拷贝和浅拷贝的区别">7、深拷贝和浅拷贝的区别</h2>
+<p>浅拷贝（shallowCopy）只是增加了一个指针指向已存在的内存地址，</p>
+<p>深拷贝（deepCopy）是增加了一个指针并且申请了一个新的内存，使这个增加的指针指向这个新的内存，相当于复制了一个新的对象</p>
+<p>使用深拷贝的情况下，释放内存的时候不会因为出现浅拷贝时释放同一个内存的错误。</p>
+<h2 id="8用过-arraylist-了吗-有什么特点">8、用过 ArrayList 了吗 有什么特点？</h2>
+<p>Java 集合框架中的一种存放相同类型的元素数据，是一种变长的集合类，基于定长数组实现，当加</p>
+<p>入数据达到一定程度后，会实行自动扩容，即扩大数组大小。底层是使用数组实现，添加元素。</p>
+<p>如果 add(o)，添加到的是数组的尾部，如果要增加的数据量很大，应该使用 ensureCapacity()</p>
+<p>方法，该方法的作用是预先设置 ArrayList 的大小，这样可以大大提高初始化速度。</p>
+<p>如果使用 add(int,o)，添加到某个位置，那么可能会挪动大量的数组元素，并且可能会触发扩</p>
+<p>容机制。</p>
+<p>高并发的情况下，线程不安全。多个线程同时操作 ArrayList，会引发不可预知的异常或错误。</p>
+<p>ArrayList 实现了 Cloneable 接口，标识着它可以被复制。注意：<strong>ArrayList 里面的 clone() 复制其实</strong></p>
+<p><strong>是浅复制。</strong></p>
+<h2 id="9有了-array-为什么还要使用-arraylist-呢">9、有了 Array 为什么还要使用 ArrayList 呢</h2>
+<p>通常我们在使用的时候，如果在不明确要插入多少数据的情况下，普通数组就很尴尬了，因为你不知道需要初始化数组大小为多少，而 ArrayList 可以使用默认的大小，当元素个数到达一定程度后，会自动扩容。</p>
+<p>可以这么来理解：<strong>我们常说的数组是定死的数组，ArrayList 却是相当于动态数组</strong></p>
+<h2 id="10获取类的-class-对象的方法">10、获取类的 class 对象的方法</h2>
+<p>什么是 Class 对象</p>
+<p>定义：Class 对象是 jvm 生成用来保存对象的类的信息的。</p>
+<p>java 程序执行前需要经过编译、加载、链接和初始化这几个阶段，编译阶段，会将源文件编译为.class 文件，编译器同时会在 class 文件中生成 class 对象；加载阶段，通过 jvm 类的加载机制，将 class 对象加载到内存中。在创建对象实例前，jvm 会先检查 Class 对象是否在内存中，如果不存在，则加载 Class 对象，然后再创建对象实例。如果存在，则直接根据 Class 对象创建对象实例。</p>
+<p>获取的方法：</p>
+<ul>
+<li>getClass()方法 是 Object 类中</li>
+<li>静态成员直接获取，<strong>每个类都有隐含的静态成员 class</strong></li>
+<li>通过 Class 类的静态方法 forName()方法获取</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.zhu<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @description: TestClass
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date: 2023/3/16 9:55
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author: zdp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @version: 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestClass</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. getClass() 方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Teacher teacher <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Teacher<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        Class<span style="color:#f92672">&lt;?&gt;</span> clazz <span style="color:#f92672">=</span> teacher<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>clazz<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 静态成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        Class<span style="color:#f92672">&lt;?&gt;</span> teacherClazz <span style="color:#f92672">=</span> Teacher<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>teacherClazz<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3. Class类静态方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            Class<span style="color:#f92672">&lt;?&gt;</span> clazz3 <span style="color:#f92672">=</span> Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.zhu.Teacher&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>clazz3<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ClassNotFoundException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>通过上面的复习（包括 java 创建对象的中的反射机制创建对象），不难得出相关的结论啊，再去复习之前看不懂的代码</p>
+<p>实战：</p>
+<p>Bean 拷贝类</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.beans.BeanUtils<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.stream.Collectors<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * 拷贝工具类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author xiaozhu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @date 2022年05月22日 16:25                          $
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BeanCopyUtils</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">BeanCopyUtils</span><span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 单个的拷贝方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @author xiaozhu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @date 2022/5/22 16:30
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param source
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param clazz
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @return V
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>V<span style="color:#f92672">&gt;</span> V <span style="color:#a6e22e">copyBean</span><span style="color:#f92672">(</span>Object source<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;</span>V<span style="color:#f92672">&gt;</span> clazz<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        V result <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 通过反射机制创建一个V类型的对象， 将Source对象的属性复制到result中返回即可
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            result <span style="color:#f92672">=</span> clazz<span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            BeanUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">copyProperties</span><span style="color:#f92672">(</span>source<span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * List集合的拷贝方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @author xiaozhu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @date 2022/5/22 16:38
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param clazz
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @return java.util.List&lt;V&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//第一个&lt;O, V&gt;是方法使用泛型, List&lt;V&gt;是返回类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>O<span style="color:#f92672">,</span> V<span style="color:#f92672">&gt;</span> List<span style="color:#f92672">&lt;</span>V<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">copyBeanList</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>O<span style="color:#f92672">&gt;</span> list<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;</span>V<span style="color:#f92672">&gt;</span> clazz<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//先将的单个转化为拷贝的，然后直接收集程集合
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>o <span style="color:#f92672">-&gt;</span> copyBean<span style="color:#f92672">(</span>o<span style="color:#f92672">,</span> clazz<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo + Github Pages</a> 
+</div>
+
+    </div>
+  </body>
+</html>
