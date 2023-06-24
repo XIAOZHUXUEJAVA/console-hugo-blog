@@ -6,7 +6,16 @@
     <description>Recent content on littlepig</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxxdgblog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 14:19:28 +0800</lastBuildDate><atom:link href="https://xxxdgblog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HighCohesion_LowCoupling</title>
+      <link>https://xxxdgblog.github.io/posts/highcohesion_lowcoupling/</link>
+      <pubDate>Sat, 24 Jun 2023 14:19:28 +0800</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/posts/highcohesion_lowcoupling/</guid>
+      <description>&lt;p&gt;使用 &lt;code&gt;Java SpringBoot&lt;/code&gt; 中的案例解释一下什么是高内聚和低耦合&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>For-test</title>
       <link>https://xxxdgblog.github.io/posts/for-test/</link>
