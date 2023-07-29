@@ -6,7 +6,16 @@
     <description>Recent content in Posts on littlepig</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jun 2023 14:19:28 +0800</lastBuildDate><atom:link href="https://xxxdgblog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jul 2023 14:19:28 +0800</lastBuildDate><atom:link href="https://xxxdgblog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recent Life</title>
+      <link>https://xxxdgblog.github.io/posts/recently/</link>
+      <pubDate>Fri, 28 Jul 2023 14:19:28 +0800</pubDate>
+      
+      <guid>https://xxxdgblog.github.io/posts/recently/</guid>
+      <description>&lt;p&gt;记录一下最近的生活吧~&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>HighCohesion_LowCoupling</title>
       <link>https://xxxdgblog.github.io/posts/highcohesion_lowcoupling/</link>
